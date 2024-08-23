@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ripunjay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    :root {
+      --base-color: #f1f1f1;
+      --border: #dee4e8;
+      --accent-color: #006adc;
+      --menu-text-color: #687076;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .Header {
+      width: 100%;
+      /* position: absolute; */
+      z-index: 1111;
+    }
+
+    .main_div {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .contener {
+      width: 1088px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .contener-header {
+      width: 1188px;
+      margin: 0 auto;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      /* width: 1312px; */
+      height: 88px;
+    }
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    ul li {
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li a{
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li:hover{
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
+
+    .download_cv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .downloas_cv_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      /* text-align: left; */
+      color: var(--accent-color);
+      position: relative;
+      top: -2px;
+      gap: 8px;
+    }
+   
+    .downloas_cv_svg_2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* banner div */
+    .alignment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gradient-text {
+      background: linear-gradient(
+          86deg,
+          #0f3058 0%,
+          #0c3a6f 0.01%,
+          #0561c4 29.9%,
+          #11181c 35.33%,
+          #0254ad 33.33%,
+          #11181c 50%,
+          #11181c 100%
+        ),
+        linear-gradient(0deg, #11181c 37%, rgba(17, 24, 28, 0) 45%);
+      background-size: 131% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    #Banner {
+      height: calc(100% - 88px);
+      width: 100%;
+      position: relative;
+    }
+    .content {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      /* overflow-y: 80px; */
+    }
+    .content_info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    .content_img {
+      width: 436px;
+      height: 436px;
+    }
+
+    .name {
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 80px;
+    }
+
+    .discriptionText {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      width: 640px;
+      height: 72px;
+      color: #687076;
+    }
+
+    .banner_contener {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      opacity: 100%;
+    }
+
+    .banner_img {
+      position: relative;
+      width: 100%;
+      opacity: 100%;
+    }
+
+    .bannerSVG {
+      display: block;
+      /* position: relative; */
+      width: 100%;
+      /* height: auto; */
+      opacity: 100%;
+    }
+    .bannerSVG_tablet{
+      display: none;
+    }
+    .bannerSVG_mobile{
+      display: none;
+    }
+
+    .h1 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: center;
+      color: #11181c;
+    }
+
+    /* highlight work */
+    .btn {
+      padding: 8px 32px;
+      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      /* cursor: pointer; */
+      height: -moz-fit-content;
+      height: fit-content;
+      display: inline-block;
+      text-align: center;
+      box-sizing: border-box;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid #f0f0f0;
+      background: #f0f0f0;
+      white-space: nowrap;
+    }
+
+    .headerText {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+
+    .arrow {
+        position: relative;
+        top: 6px;
+        color: #4f6f82;
+    }
+
+    .btn_main {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .headertClick {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .headline_text {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: left;
+      color: var(--accent-color);
+      position: relative;
+      top: -2px;
+    }
+    .headline_text:hover {
+      font-size: 33px;
+      line-height: 41px;
+      transition: 1000ms;
+      animation-timing-function: ease-in-out;
+
+    }
+
+    .headertClick {
+      margin: 24px 0 8px 0;
+    }
+
+    .gradient-text-headline {
+      /* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100%);  */
+      background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      top: -4px;
+    }
+
+    .headLineDi {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      width: 752px;
+      height: 48px;
+    }
+
+    .headLineDi-1 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      width: 568px;
+      height: 24px;
+    }
+
+    .mainPadding-56 {
+      padding: 56px 0;
+    }
+
+    .hoverAnimation {
+      width: 1088px;
+      height: 480px;
+      background: linear-gradient(180deg, #eaedfc 0%, #d2dcff 100%);
+      margin-top: 32px;
+      border-radius: 8px;
+    }
+
+    .img_photography {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .img_photography {
+      width: 94%;
+      height: auto;
+    }
+
+    .Div_imgPhotography {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .Div_imgPhotography_2{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Blur */
+    .hover07 div img {
+      -webkit-filter: blur(3px);
+      filter: blur(3px);
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+    }
+    .hover07 div:hover img {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+    .hover07 {
+      position: relative;
+    }
+
+    .hover07 img:first-child {
+      -webkit-filter: blur(9px);
+      filter: blur(9px);
+      -webkit-transition: filter 0.3s ease-in-out;
+      transition: filter 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .hover07 img.hidden {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .hover07:hover img:first-child {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+
+    .hover07:hover img.hidden {
+      opacity: 1;
+    }
+    .hover07:hover .hover-second-image-over-first-image {
+      opacity: 0;
+    }
+
+    /* blrue */
+
+    .container {
+      height: 300px;
+      width: 500px;
+      position: relative;
+    }
+
+    img {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    .hover08 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      z-index: 08;
+    }
+
+    .hoverAnimation .hover-second-image-over-first-image {
+      width: 15%;
+      height: 86%;
+      background-image: url(./images/photo_hover.png);
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      z-index: 10;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      opacity: 0.9;
+      top: 32%;
+    }
+    .SecondHighlight_work {
+      padding-top: 56px;
+    }
+    .getTouch {
+      display: flex;
+      justify-content: flex-start;
+      font-family: "Poppins", sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: center;
+      color: #11181c;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 364px 264px;
+      grid-gap: 16px;
+    }
+
+    .first {
+      grid-column: 1 / span 2;
+      width: 100%;
+    }
+
+    .second {
+      grid-column: 1 / 2;
+      width: 100%;
+      display: flex;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+    }
+    .third {
+      grid-column: 2 / span 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      flex-direction: column;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+    }
+    /* .grid-item{
+    height: 500px;
+    border: 1px solid red;
+} */
+    .imageOverText {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-image: url("./images/Frame 541.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+    }
+    .headline_text-cv {
+      font-family: "Poppins", sans-serif;
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 80px;
+      text-align: left;
+      /* color: dodgerblue; */
+      background: linear-gradient(
+          90deg,
+          #e2e7ee 0%,
+          #0452ad 0.01%,
+          #0654aa 17.9%,
+          #006adc 33.33%,
+          #a6a7a8 50%,
+          #f3f5f7 100%
+        ),
+        linear-gradient(0deg, #1799e3 0%, rgba(152, 176, 190, 0) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      /* top: -4px; */
+    }
+
+    .downloas_cv_svg .top-8 {
+      color: #c3ddec;
+    }
+    .padding-72 {
+      margin: 72px;
+      display: flex;
+    }
+    .top-8 {
+      position: relative;
+      top: 2px;
+    }
+    .bothImg {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+    .class_postion {
+      position: relative !important;
+      width: 48% !important;
+      height: auto;
+    }
+    .getTouch {
+      padding-bottom: 40px;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact_Image {
+      width: 48%;
+      height: auto;
+    }
+    .contact_info-link {
+      display: flex;
+      gap: 32px;
+      padding-left: 16px;
+    }
+    .link-heding {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      text-align: left;
+      color: #507fa2;
+    }
+    a {
+      text-decoration: none;
+    }
+    .svg-aline {
+      position: relative;
+      top: 6px;
+    }
+    .contact-link {
+      color: #507fa2;
+    }
+    .personal-img {
+      width: 32%;
+      height: auto;
+    }
+    .personal-info {
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .personalDetail {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .pesonal-RP {
+      font-family: "Poppins", sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 40px;
+      /* text-align: center; */
+      background: linear-gradient(90deg, #11181c 0%, #2c566f 50%, #144764 100%);
+      /* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100%);  */
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      width: 252px;
+     
+    }
+    .personal-disc {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      width: 257px;
+     
+    }
+    .footer-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copyRight {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+    }
+
+    .pointer {
+      cursor: pointer !important;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .destop {
+      display: block;
+    }
+  .res_mobile{
+    display: none;
+  }
+  .hamburger-menu {
+  display: none;
+}
+body.no-scroll {
+    overflow: hidden !important;
+}
+    @media (max-width: 1210px) {
+      .contener-header {
+        width: auto;
+        margin: 0 30px;
+      }
+      .contener {
+        width: auto;
+        margin: 0 60px;
+        position: relative;
+      }
+      .hoverAnimation {
+        width: auto;
+      }
+      .content_img {
+        width: auto;
+        height: auto;
+      }
+      .link-heding {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .pesonal-RP {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .personal-disc {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .contact_Image {
+        width: 44%;
+      }
+      .personal-img {
+        width: 29%;
+      }
+    }
+    @media (max-width: 1100px) {
+      .banner-tab-contener {
+        height: 100%;
+        padding-right: 0px !important;
+      }
+
+      .banner_contener {
+        width: auto;
+      }
+      .discriptionText {
+        width: 489px;
+        height: auto;
+      }
+      .name {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      .content {
+        gap: 55px;
+      }
+      .contener {
+        width: auto;
+        margin: 0;
+        padding: 0 60px;
+        position: relative;
+      }
+      .h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      .headline_text {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+      }
+      .hoverAnimation {
+        height: 426px;
+      }
+      .img_photography {
+        width: 77%;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .mobile {
+        display: block;
+        width: 90%;
+        height: auto;
+      }
+      .name {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      .discriptionText {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .destop {
+        display: none;
+      }
+      .content_img {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .bannerSVG_mobile{
+        display: none;
+      }
+      .bannerSVG{
+        display: none;
+      }
+      .bannerSVG_tablet{
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+      }
+    }
+    @media (max-width: 950px) {
+      .mainPadding-56 {
+        padding: 40px 0;
+      }
+      .discriptionText {
+        width: auto;
+      }
+      .content_info {
+        width: 94%;
+      }
+      .content_img {
+        width: 80%;
+      }
+      .contener {
+        padding: 0 25px;
+      }
+      .headLineDi {
+        width: auto;
+      }
+      .grid-container {
+        grid-template-rows: 239px 174px;
+      }
+      .headline_text-cv {
+        font-size: 38px;
+      }
+      .download_svg {
+        height: 40px;
+        width: 40px;
+      }
+      .personal-info {
+        padding: 0 16px;
+      }
+      .contact_svg {
+        height: 24px;
+        width: 24px;
+      }
+      .email_svg {
+        height: 24px;
+        width: 24px;
+      }
+      .contact_Image {
+        width: 30%;
+      }
+      .contact_info-link {
+        gap: 9px;
+      }
+      .personal-disc {
+        width: 148px;
+      }
+      .personalDetail {
+        width: 50%;
+      }
+    }
+    @media (max-width: 700px) {
+      .contact_info-link {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .link-heding {
+        justify-content: left;
+      }
+      .contact_Image {
+        width: 44%;
+      }
+      .headLineDi-1 {
+        width: auto;
+        height: auto;
+      }
+      .headline_text {
+        font-size: 17px;
+      }
+      .width-24 {
+        width: 17px;
+        height: 15px;
+      }
+      .hoverAnimation {
+        height: 277px;
+      }
+      .arrow {
+        height: 24px;
+        width: 30px;
+      }
+
+      .Desktop_menu {
+        display: none;
+      }
+    /* humberg menu */
+ 
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    /* right: 0; */
+    /* top: 0; */
+    z-index: 1;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* top:18px;
+    right: 39px; */
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .menu__btn>span,
+  .menu__btn>span::before,
+  .menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5F6368;
+    transition-duration: .25s;
+  }
+
+  .menu__btn>span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn>span::after {
+    content: '';
+    top: 8px;
+  }
+
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+
+  .headerTitle:hover {
+    color: #000000;
+  }
+
+  .search_button {
+    display: none;
+  }
+
+  .hamburger-menu {
+    position: relative;
+    top: -8px;
+    /* right: 0; */
+    height: 100%;
+    /* width: 20%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: flex-end; */
+    justify-content: center;
+    align-items: center;
+    transition: all 1.3s ease;
+    z-index: 24;
+  }
+
+  .menu__box {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* width: 35%; */
+    height:0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: all 1.99s ease;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    height:100%;
+    padding: 80px 16px;
+    /* min-height: 100vh; */
+    /* width: 100%; */
+    width:-webkit-fill-available;
+    
+  }
+  
+  .hammerMain{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    top: 24%;
+    position: relative;
+  }
+  .hammerContener{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .bigniYourIdea{
+    width: 328px;
+    height:auto;
+    border-radius: 8px;
+    background-color: #000000;
+    padding:48px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+  .bigniYourIdea_inner{
+    font-family: "Poppins",sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #F5F5F5;
+  }
+  
+}
+
+@media (max-width: 585px) {
+      #Banner {
+        margin-top: 45px;
+      }
+      .banner_contener {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .bigniYourIdea{
+        width:auto;
+      }
+      .content_img{
+        width: auto;
+      }
+      .contener {
+        padding: 0 16px;
+      }
+      .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .hoverAnimation {
+        height: 178px;
+      }
+      .bothImg {
+        flex-direction: column;
+      }
+      /* .mobile-height {
+        height: 352px;
+      } */
+      .mobile-height {
+        /* height: auto; */
+        margin-top: 24px;
+      }
+      .mobile-height-2{
+        margin-top: 24px;
+        width: auto;
+        height: 352px;
+        /* top: 1554px;
+        left: 16px;
+        gap: 0px; */
+        border-radius: 8px 0px 0px 0px;
+        /* opacity: 0px; */
+
+      }
+      .img_photography{
+        width: 96%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      .Div_imgPhotography {
+        /* width: auto; */
+        /* padding: 35px; */
+        width: 328px;
+        margin: auto;
+        height: 178px;
+        top: 1070px;
+        left: 16px;
+        gap: 0px;
+        border-radius: 8px 0px 0px 0px;
+     }
+     .contact_info-link{
+      flex-direction:column;
+      padding-left: 8px;
+     }
+     .personalDetail{
+      width: 60%;
+      gap: 8px;
+      padding-left: 8px;
+     }
+
+     .Div_imgPhotography_2{
+      margin: auto;
+      width: 328px;
+      height: 352px;
+      /* top: 1554px;
+      left: 16px; */
+      gap: 0px;
+      border-radius: 8px 0px 0px 0px;
+      /* opacity: 0px; */
+
+     }
+     /* .hoverAnimation{
+      display: none;
+      z-index: -10;
+     } */
+
+      .class_postion {
+        width: 80% !important;
+      }
+      .SecondHighlight_work{
+        padding-top: 48px;
+      }
+      .hover07 img.hidden {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .hover07 img:first-child {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+      }
+
+      .hover07 img.hidden {
+        opacity: 1;
+      }
+      .hover07 .hover-second-image-over-first-image {
+        opacity: 1;
+      }
+      .getTouch {
+        text-align: left;
+      }
+      .Desktop_menu {
+        display: none;
+      }
+      .first {
+        height: 152px;
+      }
+      .second,
+      .third {
+        height: auto;
+        padding: 10px;
+        width: auto;
+      }
+      .headline_text-cv {
+        font-size: 28px;
+        line-height: 40px;
+      }
+      .padding-72 {
+        margin: 16px;
+      }
+      .imageOverText {
+        background-size: cover; /* <------ */
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      .getTouch {
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 32px;
+      }
+      .footer-div{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+     }
+     .headLineDi {
+        width: auto;
+        height: auto;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .discriptionText{
+
+        font-size: 14px;
+        line-height: 22px;
+        padding-right: 16px;
+    }
+    .arrow{
+        height: 24px;
+        width: 24px;
+        position: relative;
+        top: 7px;
+    }
+    .download_svg {
+        height: 30px;
+        width: 30px;
+    }
+    .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   }
+   .contact_Image{
+       width: 140px;
+   }
+   .personal-img {
+        width: 100px;
+    }
+    .pesonal-RP {
+        font-size: 18px;
+        line-height: 26px;
+        width: auto;
+    }
+    .personal-disc {
+        font-size: 14px;
+        line-height: 22px;
+        width: auto;
+    }
+    .personal-info {
+        padding: 0;
+        padding-bottom: 14px;
+        padding-top: 14px;
+    }
+    .link-heding {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .svg-aline{
+      top: 4px;
+      padding-left: 8px;
+    }
+    .contact_svg {
+        height: 19px;
+        width: 11px;
+    }
+    .email_svg {
+        height: 19px;
+        width: 11px;
+    }
+    .third{
+        align-self: auto;
+    }
+    .headertClick{
+      margin: 20px 0 8px 0;
+    }
+    .btn_main{
+      gap: 8px;
+    }
+    .headline_text{
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .download{
+      gap: 8px;
+      /* justify-content: center; */
+    }
+    .btn {
+        /* padding: 5px 17px; */
+        padding: 8px 8px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .h1 {
+        text-align: left;
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 32px;
+    }
+    .logo{
+        height: 40px;
+        width: 40px;
+    }
+    /* .mobile-padding{
+      padding: 132px;
+    } */
+    .res_mobile{
+      display: block;
+    }
+   
+    .destop{
+        display: none;
+    }
+    .mobile{
+       display: none;
+    }
+    .bannerSVG{
+      display: none;
+    }
+    .bannerSVG_tablet{
+      display: none;
+    }
+    .bannerSVG_mobile{
+      display: block;
+    }
+
+    .name{
+      
+        font-size: 32px;
+        line-height: 40px
+    }
+
+    .headLineDi-1{
+
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .banner-tab-contener {
+        padding-left: 0px !important;
+        padding-right: 16px !important;
+    }
+    .content_info{
+      padding-left: 16px;
+    }
+    .content_info{
+       gap: 24px;
+    }
+    .content {
+      /* margin-top: 32px; */
+        gap:16px;
+    }
+    .contener-header {
+        margin: 0 16px;
+    }
+    .hover07 div img {
+      -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+    .content_img {
+        display: flex;
+        justify-content: flex-start;
+    }
+    img {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+}
+  </style>
+  <body>
+    <nav class="Header">
+      <div class="main_div">
+        <div class="contener-header">
+          <div class="contener">
+            <div class="menu_bar">
+              <div class="logo">
+                <img src="images/ripunjay logo-01 1 (1).png" alt="" />
+              </div>
+              <div class="Desktop_menu" class="menu">
+                <ul>
+                  <li class="pointer wok"><a href="#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                  <li class="pointer" id="aboutLink1">About</li>
+                  <li class="pointer"><a href="#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                </ul>
+              </div>
+              <div class="download_cv Desktop_menu">
+                <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                  <span class="downloas_cv_text">Download CV</span>
+                  <span class="downloas_cv_svg">
+                    <svg
+                      class="width-24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                        fill="#006ADC"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div id="hamburger-menu" class="hamburger-menu" (onClick)="openMenu()">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+          
+                <div class="menu__box" style="opacity: 100%;">
+                  <div class="hammerMain">
+                    <div class="hammerContener">
+                      <div  class="menu">
+                        <ul>
+                          <li class="pointer wok2" (onClick)="uncheckCheckbox()"><a href="#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                          <li class="pointer" id="aboutLink2">About</li>
+                          <li class="pointer"><a href="#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                        </ul>
+                      </div>
+                      <div class="download_cv">
+                        <a class="download" target="_blank" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                          <span class="downloas_cv_text">Download CV</span>
+                          <span class="downloas_cv_svg">
+                            <svg
+                              class="width-24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="20"
+                              viewBox="0 0 12 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                                fill="#006ADC"
+                              />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="bigniYourIdea">
+                             <span class="bigniYourIdea_inner">let’s bring you’re idea to life</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="Banner">
+      <div class="main_div alignment">
+        <div class="contener banner-tab-contener">
+          <div class="content banner_contener">
+            <div class="content_info">
+              <div class="name">
+                <span class="gradient-text"> Ripunjay Palkhe.</span><br />
+                UX Designer
+              </div>
+              <div class="discriptionText">
+                I'm a dedicated UX designer based in India, specializing in
+                creating intuitive and engaging digital solutions. Let's
+                collaborate to bring your vision to life and exceed user
+                expectations.
+              </div>
+              <div>
+                <a class="download" href="#ContactUS" class="menu-link" data-target="ContactUS">
+                  <span class="downloas_cv_text">Contact me
+                    <span class="downloas_cv_svg_2">
+                        <!-- <svg
+                          class="width-24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="20"
+                          viewBox="0 0 12 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                            fill="#006ADC"
+                          />
+                        </svg> -->
+                        <!-- <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                          <path d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z" fill="#006ADC"/>
+                       </svg> -->
+                       <svg
+                       class="width-24"
+                       xmlns="http://www.w3.org/2000/svg"
+                       width="12"
+                       height="20"
+                       viewBox="0 0 12 20"
+                       fill="none"
+                     >
+                       <path
+                         d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                         fill="#006ADC"
+                       />
+                     </svg>
+                      </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="content_img">
+              <img class="destop" src="images/ripunjay_img.png" alt="" />
+              <img class="mobile" src="images/ripunjay_img_1.png" alt="" />
+              <img class="res_mobile" src="images/ripunjay_mobileImg.png" alt="">
+            </div>
+          </div>
+          <div class="banner_img">
+            <img class="bannerSVG" src="./images/banner image for portfolio website.png" alt="">
+            <img class="bannerSVG_mobile" src="./images/mobile_image_2.png" alt="">
+            <img class="bannerSVG_tablet" src="./images/tablet_image_1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Highlighted_Works">
+      <div class="main_div mainPadding-56">
+        <div class="contener">
+          <div>
+            <div class="h1 headerText">Highlighted Works</div>
+            <div class="btn_main">
+              <button class="btn">Website design</button>
+              <button class="btn">Case study</button>
+            </div>
+            <div class="headertClick">
+              <a class="download" href="./photoGraohicCaseStudy.html">
+                <span class="headline_text gradient-text-headline">
+                    Captured Moments 
+                    <span class="downloas_cv_svg">
+                        <svg
+                          class="arrow"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z"
+                            fill="#4F6F82"
+                          />
+                        </svg>
+                      </span>
+                </span>
+               
+              </a>
+            </div>
+            <div class="headLineDi-1">
+              Photography website featuring services showcased in the hero
+              section.
+            </div>
+            <div class="hoverAnimation hover07 mobile-height">
+              <div class="Div_imgPhotography mobile-padding">
+                <!-- <div class="hover-second-image-over-first-image"></div>
+                            <div class="hover08"></div> -->
+                <div class="bothImg">
+                  <img
+                    class="img_photography"
+                    src="./images/Group 603.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="SecondHighlight_work">
+            <div class="btn_main">
+              <button class="btn">Website design</button>
+              <button class="btn">Webapp design</button>
+              <button class="btn">Case study</button>
+            </div>
+            <div class="headertClick">
+              <a class="download" href="www.google.com">
+                <span class="headline_text gradient-text-headline"> 
+                    Bookmarked Moments: A Digital Repository
+                    <span class="downloas_cv_svg">
+                        <svg
+                          class="arrow"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z"
+                            fill="#4F6F82"
+                          />
+                        </svg>
+                      </span>
+                </span>
+               
+              </a>
+            </div>
+            <div class="headLineDi">
+              Crafting a digital space for your treasured memories – a website
+              and web app combo dedicated to your online memory hub.
+            </div>
+            <div class="hoverAnimation hover07 mobile-height-2">
+              <div class="Div_imgPhotography_2">
+                <!-- <div class="hover-second-image-over-first-image"></div>
+                            <div class="hover08"></div> -->
+                <div class="bothImg">
+                  <img
+                    class="class_postion"
+                    src="./images/bookmark1.png"
+                    alt=""
+                  />
+                  <img
+                    class="class_postion"
+                    src="./images/bookmark2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ContactUS">
+      <div class="main_div mainPadding-56">
+        <div class="contener">
+          <div class="getTouch">Let's Get in Touch</div>
+          <div class="grid-container">
+            <div class="grid-item first">
+              <div class="imageOverText">
+                <a class="download padding-72" target="_blank" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                  <span class="headline_text-cv">Download CV</span>
+                  <span class="downloas_cv_svg top-8">
+                    <svg
+                      class="download_svg"
+                      width="64"
+                      height="64"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.3746 57.7445L17.59 53.9598L39.5486 32.0012L17.59 10.0425L21.3746 6.25781L47.118 32.0012L21.3746 57.7445Z"
+                        fill="#C3DDEC"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="grid-item second">
+              <div class="contact-info">
+                <span class="contact_info-link">
+                  <div class="link-heding">
+                    <a target="_blank" class="" href="https://www.linkedin.com/in/ripunjay-palkhe/">
+                      <span class="contact-link">LinkedIn</span>
+                      <span class="svg-aline">
+                        <svg
+                          class="contact_svg"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="26"
+                          viewBox="0 0 16 26"
+                          fill="none"
+                        >
+                          <path
+                            d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z"
+                            fill="#507FA2"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="link-heding">
+                    <a href="mailto:palkheripunjay01@gmail.com" style="text-transform: none;" target="_blank">
+                      <span class="contact-link">Email</span>
+                      <span class="svg-aline">
+                        <svg
+                          class="email_svg"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="26"
+                          viewBox="0 0 16 26"
+                          fill="none"
+                        >
+                          <path
+                            d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z"
+                            fill="#507FA2"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </span>
+                <img
+                  class="contact_Image"
+                  src="./images/contactMe.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="grid-item third">
+              <div class="personal-info">
+                <span class="personalDetail">
+                  <span class="pesonal-RP">Ripunjay Palkhe</span>
+                  <span class="personal-disc"
+                    >Discover More About My Journey</span
+                  >
+                </span>
+                <img
+                  class="personal-img"
+                  src="./images/ripunjay logo-01 1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="main_div mainPadding-56">
+        <div class="contener footer-div">
+          <div class="copyRight">© 2024 Ripunjay Palkhe.</div>
+          <div class="menu">
+            <ul>
+              <li class="pointer wok1"><a href="#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+              <li class="pointer" id="aboutLink3">About</li>
+              <li class="pointer"><a href="#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+   
+  </body>
+  <script>
+    document.getElementById('aboutLink1').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink2').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink3').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    function openMenu(){
+     
+       let isMenuOpen = false;
+
+       const hamburgerMenu = document.getElementById('hamburger-menu');
+       hamburgerMenu.addEventListener('click', () => {
+         isMenuOpen = !isMenuOpen;
+         document.body.classList.toggle('no-scroll', isMenuOpen);
+         
+       });
+     }
+    
+     document.addEventListener('DOMContentLoaded', function() {
+       const workMenuItem = document.querySelector('.wok');
+
+       const highlightedWorksSection = document.getElementById('Highlighted_Works');
+       
+       workMenuItem.addEventListener('click', function() {
+        
+         highlightedWorksSection.scrollIntoView({
+           behavior: 'smooth'
+         });
+       });
+     });
+     document.addEventListener('DOMContentLoaded', function() {
+       const workMenuItem = document.querySelector('.wok1');
+
+       const highlightedWorksSection = document.getElementById('Highlighted_Works');
+       
+       workMenuItem.addEventListener('click', function() {
+        
+         highlightedWorksSection.scrollIntoView({
+           behavior: 'smooth'
+         });
+       });
+     });
+     document.addEventListener('DOMContentLoaded', function() {
+       const workMenuItem = document.querySelector('.wok2');
+
+       const highlightedWorksSection = document.getElementById('Highlighted_Works');
+       
+       workMenuItem.addEventListener('click', function() {
+        
+         highlightedWorksSection.scrollIntoView({
+           behavior: 'smooth'
+         });
+       });
+     });
+     document.addEventListener('DOMContentLoaded', function() {
+      const menuLinks = document.querySelectorAll('.menu-link');
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          // Prevent default anchor behavior
+          event.preventDefault();
+
+          // Get the target section id from the data attribute
+          const targetId = this.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            // Scroll to the target section smoothly
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            // Uncheck the checkbox to hide the menu
+            document.getElementById('menu__toggle').checked = false;
+          }
+        });
+      });
+    });
+   </script>
+</html>

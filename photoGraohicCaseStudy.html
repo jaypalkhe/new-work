@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ripunjay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    :root {
+      --base-color: #f1f1f1;
+      --border: #dee4e8;
+      --accent-color: #006adc;
+      --menu-text-color: #687076;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+    }
+
+    .Header {
+      width: 100%;
+      z-index: 1111;
+    }
+
+    .main_div {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .contener {
+      width: 1088px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .contener-header {
+      width: 1188px;
+      margin: 0 auto;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 88px;
+    }
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    ul li {
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li a{
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li:hover{
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
+
+    .download_cv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .downloas_cv_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: var(--accent-color);
+      position: relative;
+      top: -2px;
+      gap: 8px;
+    }
+   
+    .logo-nav{
+      width: 100%;
+    }
+
+    .arrow {
+        position: relative;
+        top: 6px;
+        color: #4f6f82;
+    }
+
+  
+   
+
+    .mainPadding-56 {
+      padding: 56px 0;
+    }
+
+    .footer-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copyRight {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+    }
+
+    .pointer {
+      cursor: pointer !important;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .destop {
+      display: block;
+    }
+ 
+  .hamburger-menu {
+  display: none;
+}
+body.no-scroll {
+    overflow: hidden !important;
+}
+
+/* back button start*/
+.backButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+   
+}
+    .backButton{
+        padding-top: 24px ;
+        padding-bottom: 24px;
+    }
+    .paddingSet{
+        padding-right: 0;
+        padding-left: 0;
+    }
+.backButtonText{
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+    bottom: 1px;
+}
+
+/* back button end */
+.headline_text{
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .gradient-text-headline {
+      /* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100%);  */
+      background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      top: -4px;
+    }
+    .captureMoments{
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
+    }
+    .headLineDi-1 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      /* width: 568px;
+      height: 24px; */
+    }
+    .non-disclosure-agreement{
+        padding:24px 16px;
+        font-family: "Poppins",sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: #687076;
+        background-color:#F7F7F7;
+    }
+    .bannerImg{
+        background-color: #F7F7F7;
+        margin:  24px 0 32px 0px;
+        padding: 26px 28px;
+    }
+    .bannerImg-img{
+       /* margin: 26px 28px; */
+       width: 100%;
+       height: 100%;
+    } 
+    .projectDuration{
+        display: flex;
+        gap: 88px;
+        margin: 40px 0 72px 0;
+    }
+    .project-header{
+        font-family: "Poppins",sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+        color:#464D4E;
+    }
+    .project-des{
+        font-family: "Poppins",sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #687076;
+    }
+    .roll,.team,.Duration{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    .caseStudy-div{
+        display: flex;
+        gap: 75px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 64px;
+    }
+    .alineItem{
+        align-items: baseline;
+    }
+    .caseStudy-heading{
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: left;
+        color: #464D4E;
+        width: 16%;
+    }
+    .caseStudy-des{
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #687076;
+        width: 84%;
+    }
+    .p_heding{
+        font-family: "Poppins",sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 40px;
+        text-align: left;
+        color: #11181C;
+        padding-bottom: 40px;
+    }
+    .caseStudyInner-des{
+        font-family: "Poppins",sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        padding-bottom: 8px;
+        color: #464D4E;
+    }
+    .padd-24{
+        padding-bottom: 24px;
+    }
+    .dd_img{
+        padding:24px 14px;
+    }
+    .dd_img-img{
+        width: 100%;
+        border-radius: 8px;
+    }
+    .padd-bt-40{
+       margin-bottom: 40px;
+       border-radius: 8;
+    }
+    .padding-top-bottom{
+
+    }
+    .headertClick {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .headertClick {
+      margin: 0 0 8px 0;
+    }
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .download{
+      gap: 8px;
+    }
+    .headline_text {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: left;
+      color: var(--accent-color);
+      position: relative;
+      top: -2px;
+      /* background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; */
+    }
+    .downloas_cv_svg .top-8 {
+      color: #c3ddec;
+    }
+    .headLineDi-1 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      /* width: 568px;
+      height: 24px; */
+    }
+    .headLineDi {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+     
+    }
+    @media (max-width: 1210px) {
+      .contener-header {
+        width: auto;
+        margin: 0 30px;
+      }
+      .contener {
+        width: auto;
+        margin: 0 60px;
+        position: relative;
+      }
+     
+      .backButton{
+        padding-top: 24px ;
+        padding-bottom: 24px;
+      }
+      .paddingSet{
+         padding-right: 25px;
+         padding-left: 25px;
+      }
+      
+    }
+    @media (max-width: 1100px) {
+     
+
+  
+      .contener {
+        width: auto;
+        margin: 0;
+        padding: 0 60px;
+        position: relative;
+      }
+      .headline_text {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+        background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      }
+    
+    }
+
+    @media (max-width: 1000px) {
+      .mobile {
+        display: block;
+        width: 90%;
+        height: auto;
+      }
+    
+    
+      .destop {
+        display: none;
+      }
+    
+      
+    }
+    @media (max-width: 950px) {
+      .mainPadding-56 {
+        padding: 40px 0;
+      }
+   
+   
+      .contener {
+        padding: 0 25px;
+      }
+    
+  
+    }
+    @media (max-width: 700px) {
+     
+      .width-24 {
+        width: 17px;
+        height: 15px;
+      }
+   
+      .arrow {
+        height: 24px;
+        width: 30px;
+      }
+
+      .Desktop_menu {
+        display: none;
+      }
+    /* humberg menu */
+ 
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    z-index: 1;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .menu__btn>span,
+  .menu__btn>span::before,
+  .menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5F6368;
+    transition-duration: .25s;
+  }
+
+  .menu__btn>span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn>span::after {
+    content: '';
+    top: 8px;
+  }
+
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+
+
+  .hamburger-menu {
+    position: relative;
+    top: -8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.3s ease;
+    z-index: 24;
+  }
+
+  .menu__box {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    height:0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: all 1.99s ease;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    height:100%;
+    padding: 80px 16px;
+    width:-webkit-fill-available;
+    
+  }
+  
+  .hammerMain{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    top: 24%;
+    position: relative;
+  }
+  .hammerContener{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .bigniYourIdea{
+    width: 328px;
+    height:auto;
+    border-radius: 8px;
+    background-color: #000000;
+    padding:48px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+  .bigniYourIdea_inner{
+    font-family: "Poppins",sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #F5F5F5;
+  }
+  .projectDuration{
+        gap: 70px;
+        margin: 32px 0 56px 0;
+    }
+    }
+
+@media (max-width: 585px) {
+     
+      .bigniYourIdea{
+        width:auto;
+      }
+     
+      .contener {
+        padding: 0 16px;
+      }
+      .backButton{
+        padding-top: 24px ;
+        padding-bottom: 24px;
+      }
+      .paddingSet{
+         padding-right: 16px;
+         padding-left: 16px;
+      }
+     
+      .Desktop_menu {
+        display: none;
+      }
+     
+    
+      .footer-div{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+     }
+   
+  
+    .arrow{
+        height: 24px;
+        width: 24px;
+        position: relative;
+        top: 7px;
+    }
+ 
+    .download{
+      gap: 8px;
+    }
+  
+    .logo{
+        height: 40px;
+        width: 40px;
+    }
+    
+    .destop{
+        display: none;
+    }
+    .mobile{
+       display: none;
+    }
+
+    .contener-header {
+        margin: 0 16px;
+    }
+    .projectDuration{
+        flex-direction: column;
+        gap: 24px;
+        margin: 32px 0 56px 0;
+    }
+    .caseStudy-div{
+        flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    }
+
+    .caseStudy-heading{
+        width: 100%;
+    }
+}
+.pointer{
+    cursor: pointer;
+}
+
+  </style>
+  <body>
+    <nav class="Header">
+      <div class="main_div">
+        <div class="contener-header">
+          <div class="contener">
+            <div class="menu_bar">
+              <div class="logo">
+                <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+              </div>
+              <div class="Desktop_menu" class="menu">
+                <ul>
+                  <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                  <li class="pointer" id="aboutLink1">About</li>
+                  <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                </ul>
+              </div>
+              <div class="download_cv Desktop_menu">
+                <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                  <span class="downloas_cv_text">Download CV</span>
+                  <span class="downloas_cv_svg">
+                    <svg
+                      class="width-24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                        fill="#006ADC"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div id="hamburger-menu" class="hamburger-menu" (onClick)="openMenu()">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+          
+                <div class="menu__box" style="opacity: 100%;">
+                  <div class="hammerMain">
+                    <div class="hammerContener">
+                      <div  class="menu">
+                        <ul>
+                          <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                          <li class="pointer" id="aboutLink2">About</li>
+                          <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                        </ul>
+                      </div>
+                      <div class="download_cv">
+                        <a class="download" target="_blank" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                          <span class="downloas_cv_text">Download CV</span>
+                          <span class="downloas_cv_svg">
+                            <svg
+                              class="width-24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="20"
+                              viewBox="0 0 12 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                                fill="#006ADC"
+                              />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="bigniYourIdea">
+                             <span class="bigniYourIdea_inner">let’s bring you’re idea to life</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="Banner">
+        <div class="main_div">
+          <div class="contener">
+             <div id="BackButton1" class="backButton paddingSet" onClick="back()">
+                 <span class="pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                        <path d="M9.98309 19.6542L11.4023 18.2349L3.16784 10.0004L11.4023 1.76593L9.98309 0.34668L0.329342 10.0004L9.98309 19.6542Z" fill="#4F6F82"/>
+                    </svg>
+                 </span>
+                 <span class="backButtonText pointer">
+                    Back
+                 </span>
+             </div>
+             <div class="captureMoments paddingSet">
+               <span class="headline_text gradient-text-headline">Captured Moments</span>
+               <span class="headLineDi-1">Photography website featuring services showcased in the hero section.</span>
+             </div>
+             <div class="bannerImg">
+                <img class="bannerImg-img" src="./images/photograpyBanner.png" alt="">
+             </div>
+             <div class="non-disclosure-agreement">
+                <span>
+                    To follow the non-disclosure agreement, I have removed and hidden confidential details and the project name in this case study. All information here is my own and may not reflect the views of the Client or ArrayPointer. 
+                </span>
+             </div>
+             <div class="projectDuration">
+                 <div class="roll">
+                     <span class="project-header">Role</span>
+                     <span class="project-des">UX Designer, UX Researcher, UI Designer</span>
+                 </div>
+                 <div class="team">
+                     <span class="project-header">Team</span>
+                     <span class="project-des">Solo</span>
+                 </div>
+                 <div class="Duration">
+                     <span class="project-header">Duration</span>
+                     <span class="project-des">1 week</span>
+                 </div>
+             </div>
+             <div class="caseStudy-div">
+                 <div class="caseStudy-heading">Problem </div>
+                 <div class="caseStudy-des">Lack of clarity regarding available services, work samples, and clear messaging for users</div>
+             </div>
+             <div class="caseStudy-div">
+                <div class="caseStudy-heading">Objective </div>
+                <div class="caseStudy-des">To create a visually engaging hero section that effectively communicates the core services of Captured Moments, enhancing user engagement and facilitating a smooth user journey from entry point to service inquiry. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Design Approach </div>
+                <div class="caseStudy-des">The hero section is designed to immediately grab the visitor’s attention with a compelling visual narrative that aligns with the brand’s identity. This section combines a striking image, clear typography, and strategic call-to-action elements.  </div>
+            </div>
+            <div class="p_heding">
+                <span>Problem Solving</span>
+            </div>
+            <div class="caseStudy-div alineItem">
+                <div class="caseStudy-heading">Attention and Retention </div>
+                <div class="caseStudy-des">
+                    <div class="caseStudyInner-des">Challenge</div>
+                    <div class="padd-24">The initial challenge was ensuring that visitors’ attention was captured and retained long enough to convey the key messages.</div>
+                    <div class="caseStudyInner-des">Solution</div>
+                    <div class="padd-24">The visually appealing image grid immediately draws visitors in, while the bold and engaging typography holds their attention.</div>
+                    <div class="dd_img">
+                        <img class="dd_img-img" src="./images/case-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="caseStudy-div alineItem">
+                <div class="caseStudy-heading">Service Communication</div>
+                <div class="caseStudy-des">
+                    <div class="caseStudyInner-des">Challenge</div>
+                    <div class="padd-24">Visitors struggled to quickly understand the range of services offered by Captured Moments. This lack of clarity could lead to confusion and a higher bounce rate, as potential clients might leave the site without finding the specific service they need.</div>
+                    <div class="caseStudyInner-des">Solution</div>
+                    <div class="padd-24">This layout allows visitors to immediately see and navigate to the type of photography they are interested in. The clear labels and organized presentation reduce confusion and help users find relevant information quickly.</div>
+                    <div class="dd_img">
+                        <img class="dd_img-img" src="./images/case-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="caseStudy-div alineItem">
+                <div class="caseStudy-heading">User Engagement </div>
+                <div class="caseStudy-des">
+                    <div class="caseStudyInner-des">Challenge</div>
+                    <div class="padd-24">Encouraging visitors to take the next step, whether contacting Captured Moments or requesting a quotation.</div>
+                    <div class="caseStudyInner-des">Solution</div>
+                    <div class="padd-24">Clear and compelling calls-to-action are strategically placed to guide users towards interaction. The “Contact” and “Get Quotation” buttons are prominently displayed and easy to access, reducing friction in the user journey.</div>
+                    <div class="dd_img">
+                        <img class="dd_img-img" src="./images/case-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="p_heding">
+                <span>Outcome</span>
+            </div>
+            <div class="non-disclosure-agreement padd-bt-40">
+                <span>
+                    The redesigned hero section successfully addresses the initial challenges by combining visual appeal, clear communication, and strategic calls-to-action. This has resulted in:
+                </span>
+             </div>
+             <div class="caseStudy-div">
+                <div class="caseStudy-heading">Increased Engagement </div>
+                <div class="caseStudy-des">The captivating design and personal messaging have led to longer visitor retention times. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Higher Conversion Rates </div>
+                <div class="caseStudy-des">The clear calls-to-action and organized service presentation have improved the rate of inquiries and service requests. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Enhanced User Experience </div>
+                <div class="caseStudy-des">Visitors can quickly understand the services offered and feel a personal connection with Captured Moments, leading to a more satisfying and effective user experience. </div>
+            </div>
+            <div class="non-disclosure-agreement padd-bt-40">
+                <span>
+                    This case study highlights the thoughtful design process behind the hero section of Captured Moments website. By solving key challenges related to attention, communication, and engagement, the design not only enhances the visual appeal but also plays a crucial role in generating leads and growing the business. 
+                </span>
+             </div>
+             
+          </div> 
+        </div>
+    </section>
+    <section>
+        <div class="main_div">
+            <div class="contener padding-top-bottom">
+                <div class="p_heding">
+                    <span>Next work</span>
+                </div>
+                <div class="headertClick">
+                    <a class="download" href="www.google.com">
+                      <span class="headline_text gradient-text-headline"> 
+                          Bookmarked Moments: A Digital Repository
+                          <span class="downloas_cv_svg">
+                              <svg
+                                class="arrow"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z"
+                                  fill="#4F6F82"
+                                />
+                              </svg>
+                            </span>
+                      </span>
+                     
+                    </a>
+                  </div>
+                  <div class="headLineDi">
+                    Crafting a digital space for your treasured memories – a website
+                    and web app combo dedicated to your online memory hub.
+                  </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+      <div class="main_div mainPadding-56">
+        <div class="contener footer-div">
+          <div class="copyRight">© 2024 Ripunjay Palkhe.</div>
+          <div class="menu">
+            <ul>
+              <li><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+              <li id="aboutLink3">About</li>
+              <li><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+       document.getElementById('aboutLink1').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink2').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink3').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    function back() {
+         history.back()
+     }
+// const backButton = document.
+     function openMenu(){
+     
+        let isMenuOpen = false;
+
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          document.body.classList.toggle('no-scroll', isMenuOpen);
+          console.log('isMenuOpen:', isMenuOpen);
+          console.log('classList:', document.body.classList);
+        });
+      }
+    </script>
+  </body>
+</html>

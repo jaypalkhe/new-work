@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ripunjay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    :root {
+      --base-color: #f1f1f1;
+      --border: #dee4e8;
+      --accent-color: #006adc;
+      --menu-text-color: #687076;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+    }
+
+    .Header {
+      width: 100%;
+      /* position: absolute; */
+      z-index: 1111;
+    }
+
+    .main_div {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .contener {
+      width: 1088px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .contener-header {
+      width: 1188px;
+      margin: 0 auto;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      /* width: 1312px; */
+      height: 88px;
+    }
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    ul li {
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li a{
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li:hover{
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
+
+    .download_cv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .downloas_cv_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      /* text-align: left; */
+      color: var(--accent-color);
+      position: relative;
+      top: -2px;
+      gap: 8px;
+    }
+    .downloas_cv_svg_2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo-nav{
+      width: 100%;
+    }
+
+    .arrow {
+        position: relative;
+        top: 6px;
+        color: #4f6f82;
+    }
+
+  
+   
+
+    .mainPadding-56 {
+      padding: 56px 0;
+    }
+
+    .footer-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copyRight {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+    }
+
+    .pointer {
+      cursor: pointer !important;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .destop {
+      display: block;
+      width:344px;
+      height: auto;
+    }
+ 
+  .hamburger-menu {
+  display: none;
+}
+body.no-scroll {
+    overflow: hidden !important;
+}
+
+/* back button start*/
+.backButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+    color: #687076;
+   
+}
+    .backButton{
+        padding-top: 24px ;
+        padding-bottom: 24px;
+    }
+    .paddingSet{
+        padding-right: 0;
+        padding-left: 0;
+    }
+.backButtonText{
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+    bottom: 1px;
+}
+
+/* back button end */
+#Banner {
+      height: auto;
+      width: 100%;
+      position: relative;
+    }
+
+.content {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+  .alignment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gradient-text {
+      background: linear-gradient(
+          86deg,
+          #0f3058 0%,
+          #0c3a6f 0.01%,
+          #0561c4 29.9%,
+          #11181c 35.33%,
+          #0254ad 33.33%,
+          #11181c 50%,
+          #11181c 100%
+        ),
+        linear-gradient(0deg, #11181c 37%, rgba(17, 24, 28, 0) 45%);
+      background-size: 131% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .banner_contener {
+      /* position: absolute; */
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      opacity: 100%;
+    }
+    .banner_img {
+      position: relative;
+      width: 100%;
+      opacity: 100%;
+    }
+    .content_info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    .name {
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 64px;
+    }
+    .discriptionText {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      width: 640px;
+      height:auto;
+      color: #687076;
+    }
+    .content_img {
+      /* width:344px; */
+      height:auto;
+    }
+    .bannerSVG {
+      display: block;
+      /* position: relative; */
+      width: 100%;
+      /* height: auto; */
+      opacity: 100%;
+    }
+    .bannerSVG_tablet{
+      display: none;
+    }
+    .bannerSVG_mobile{
+      display: none;
+    }
+    .banner-tab-contener{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+     }
+    .otherHeding{
+      padding-bottom: 40px;
+      font-family: "Poppins",sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: left;
+    }
+
+    .graphicInfo{
+      font-family: "Poppins",sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+
+    .graphicDesc{
+      font-family: "Poppins",sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      width: 416px;
+    }
+
+    .GraphicDiv{
+      width: 100%;
+      height: auto;
+      display: flex;
+      gap: 50px;
+    }
+
+    .graphicContent{
+      flex: 416px;
+    }
+
+    .graphicImg{
+      flex: auto;
+    }
+
+    .imgFirst{
+      display: flex;
+      gap: 24px;
+      overflow: scroll;
+      flex-wrap: nowrap;
+    }
+
+    .imgSecond{
+      display: flex;
+      gap: 24px;
+      overflow: scroll;
+      flex-wrap: nowrap;
+    }
+
+    .imgFirst img{
+      width:198px;
+      height:352px;
+    }
+
+    .imgSecond img{
+      width:198px;
+      height:198px;
+    }
+
+    .graphicImg{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .padding-40{
+      padding: 40px 0;
+    }
+    .padding-bottom-52{
+      padding-bottom:52px;
+    }
+    .contact_info-link {
+      display: flex;
+      gap: 32px;
+      /* padding-left: 16px; */
+    }
+    .link-heding {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      text-align: left;
+      color: #507fa2;
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .contact-link {
+      color: #507fa2;
+    }
+    .svg-aline{
+      position: relative;
+      top: 4px;
+      padding-left: 8px;
+    }
+    .contact_svg {
+        height: 24px;
+        width: 24px;
+      }
+      .imgTuch {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+      }
+      .imgTuch img{
+        width: 100%;
+        height: auto;
+      }
+    @media (max-width: 1210px) {
+      .contener-header {
+        width: auto;
+        margin: 0 30px;
+      }
+      .banner-tab-contener{
+        width: 100% !important;
+      }
+      .contener {
+        width: auto;
+        margin: 0 60px;
+        position: relative;
+      }
+      .content_img {
+        /* width: 344px; */
+        height: auto;
+      }
+      
+    }
+  
+    @media (max-width: 1100px) {
+     
+      .name {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      .discriptionText {
+        width: 489px;
+        height: auto;
+      }
+     
+      .contener {
+        width: auto;
+        margin: 0;
+        padding: 0 60px;
+        position: relative;
+      }
+      .graphicImg{
+         overflow: auto;
+      }
+      .banner-tab-contener{
+        height: 100%;
+        margin: 0 90px !important;
+        margin-bottom: 40px !important;
+        padding: 0 !important;
+      }
+      .other-contener{
+         padding: 40px 90px;
+      }
+      .footer-div{
+        margin: 0 90px !important;
+        padding: 0 !important;
+      }
+      
+    }
+
+    @media (max-width: 1000px) {
+      .mobile {
+        display: block;
+        width: 90%;
+        height: auto;
+      }
+    
+      .content_img {
+        display: flex;
+        justify-content: flex-end;
+        /* width:232px; */
+      }
+      /* .destop {
+        display: none;
+      } */
+      .name {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      .discriptionText {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .bannerSVG_mobile{
+        display: none;
+      }
+      .bannerSVG{
+        display: none;
+      }
+      .bannerSVG_tablet{
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+      }
+      
+    }
+    @media (max-width: 950px) {
+      .mainPadding-56 {
+        padding: 40px 0;
+      }
+      .banner_contener {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      }
+      .destop {    
+         width: 275px;
+      }
+      .content_info {
+        width: 50%;
+      }
+      .contener {
+        padding: 0 25px;
+      }
+      .content {
+       gap: 40px;
+      }
+      .other-contener{
+        padding: 40px 55px;
+      }
+      /* .content_img {
+        width: 42%;
+      } */
+      .discriptionText {
+        width: auto;
+      }
+      .banner-tab-contener{
+        margin: 0 55px !important;
+        margin-bottom: 40px !important;
+        padding: 0 !important;
+      }
+      .footer-div{
+        margin: 0 55px !important;
+        padding: 0 !important;
+      }
+      .GraphicDiv{
+        flex-direction: column;
+      }
+      .graphicContent{
+        flex: auto;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 700px) {
+     
+      .width-24 {
+        width: 17px;
+        height: 15px;
+      }
+      .content_info{
+       gap: 24px;
+    }
+      .arrow {
+        height: 24px;
+        width: 30px;
+      }
+
+      .Desktop_menu {
+        display: none;
+      }
+    /* humberg menu */
+ 
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    /* right: 0; */
+    /* top: 0; */
+    z-index: 1;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* top:18px;
+    right: 39px; */
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .menu__btn>span,
+  .menu__btn>span::before,
+  .menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5F6368;
+    transition-duration: .25s;
+  }
+
+  .menu__btn>span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn>span::after {
+    content: '';
+    top: 8px;
+  }
+
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+
+
+  .hamburger-menu {
+    position: relative;
+    top: -8px;
+    /* right: 0; */
+    height: 100%;
+    /* width: 20%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: flex-end; */
+    justify-content: center;
+    align-items: center;
+    transition: all 1.3s ease;
+    z-index: 24;
+  }
+
+  .menu__box {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* width: 35%; */
+    height:0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: all 1.99s ease;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    height:100%;
+    padding: 80px 16px;
+    /* min-height: 100vh; */
+    /* width: 100%; */
+    width:-webkit-fill-available;
+    
+  }
+  
+  .hammerMain{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    top: 24%;
+    position: relative;
+  }
+  .hammerContener{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .bigniYourIdea{
+    width: 328px;
+    height:auto;
+    border-radius: 8px;
+    background-color: #000000;
+    padding:48px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+  .bigniYourIdea_inner{
+    font-family: "Poppins",sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #F5F5F5;
+  }
+  
+    }
+    @media (max-width: 585px) {
+        
+      .bigniYourIdea{
+        width:auto;
+      }
+      .content{
+        gap: 40px;
+      }
+          
+      /* .content_img{
+        width: 53%;
+      } */
+
+      .content_info{ 
+        width: 100%;
+      }
+     
+      .contener {
+        padding: 0 16px;
+      }
+      
+      .name{
+        font-size:24px;
+        line-height:32px
+      }
+      .discriptionText{
+
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 16px;
+      } 
+      .Desktop_menu {
+        display: none;
+      }
+     
+      .footer-div{
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 32px;
+      }
+      .arrow{
+          height: 24px;
+          width: 24px;
+          position: relative;
+          top: 7px;
+      }
+      .download{
+        gap: 8px;
+        /* justify-content: center; */
+      }  
+      .logo{
+          height: 40px;
+          width: 40px;
+      }
+      .mobile{
+        display: none;
+      }
+      .contener-header {
+          margin: 0 16px;
+      }
+      .other-contener{
+        padding: 40px 32px;
+      }
+    .banner-tab-contener{
+      margin: 0 32px !important;
+      margin-bottom: 40px !important;
+      width: 83%;
+    }
+    .footer-div{
+      margin: 0 32px !important;
+    }
+    }
+  </style>
+  <body>
+    <nav class="Header">
+      <div class="main_div">
+        <div class="contener-header">
+          <div class="contener">
+            <div class="menu_bar">
+              <div class="logo">
+                <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+              </div>
+              <div class="Desktop_menu" class="menu">
+                <ul>
+                  <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                  <li class="pointer" id="aboutLink1">About</li>
+                  <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                </ul>
+              </div>
+              <div class="download_cv Desktop_menu">
+                <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                  <span class="downloas_cv_text">Download CV</span>
+                  <span class="downloas_cv_svg">
+                    <svg
+                      class="width-24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                        fill="#006ADC"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div id="hamburger-menu" class="hamburger-menu" (onClick)="openMenu()">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+          
+                <div class="menu__box" style="opacity: 100%;">
+                  <div class="hammerMain">
+                    <div class="hammerContener">
+                      <div  class="menu">
+                        <ul>
+                          <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                          <li class="pointer" id="aboutLink2">About</li>
+                          <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                        </ul>
+                      </div>
+                      <div class="download_cv">
+                        <a class="download" target="_blank" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                          <span class="downloas_cv_text">Download CV</span>
+                          <span class="downloas_cv_svg">
+                            <svg
+                              class="width-24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="20"
+                              viewBox="0 0 12 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                                fill="#006ADC"
+                              />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="bigniYourIdea">
+                             <span class="bigniYourIdea_inner">let’s bring you’re idea to life</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="back">
+      <div class="main_div">
+        <div class="contener">
+           
+        </div>
+      </div>
+    </section>
+    <section id="Banner">
+      <div class="main_div alignment">
+        <div class="contener banner-tab-contener padding-bottom-52">
+          <div id="BackButton1" class="backButton paddingSet" onClick="back1()">
+            <span class="pointer">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                   <path d="M9.98309 19.6542L11.4023 18.2349L3.16784 10.0004L11.4023 1.76593L9.98309 0.34668L0.329342 10.0004L9.98309 19.6542Z" fill="#4F6F82"/>
+               </svg>
+            </span>
+            <span class="backButtonText pointer">
+               Back
+            </span>
+          </div>
+          <div class="content banner_contener">
+            <div class="content_info">
+              <div class="name">
+                <span class="gradient-text"> Hey everyone  </span> <br>
+                I'm Ripunjay Palkhe 
+              </div>
+              <div class="discriptionText">
+                A passionate UX designer with a keen eye for detail and a deep understanding of user experience principles. I create intuitive and engaging digital experiences, turning complex ideas into user-friendly designs. Committed to continuous learning, I strive to deliver solutions that exceed user expectations. where creativity meets functionality.
+              </div>
+              <div>
+                <a class="download" href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">
+                  <span class="downloas_cv_text">Contact me
+                    <span class="downloas_cv_svg_2">
+                       <svg
+                       class="width-24"
+                       xmlns="http://www.w3.org/2000/svg"
+                       width="12"
+                       height="20"
+                       viewBox="0 0 12 20"
+                       fill="none"
+                     >
+                       <path
+                         d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                         fill="#006ADC"
+                       />
+                     </svg>
+                      </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="content_img">
+              <img class="destop" src="images/about_rpImg.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="other">
+      <div class="main_div">
+        <div class="contener padding-40 other-contener">
+          <div class="otherHeding">
+            Other
+          </div>
+          <div class="GraphicDiv">
+            <div class="graphicContent">
+              <div class="graphicInfo">
+                Graphic design
+              </div>
+              <div class="graphicDesc">
+                I transform ideas into impactful visuals. Explore how I combine creativity with strategy to craft stunning graphic design
+              </div>
+            </div>
+            <div class="graphicImg">
+                <div class="imgFirst">
+                  <img src="./images/lord_krishna.png" alt="">
+                  <img src="./images/lord_shankar.png" alt="">
+                  <img src="./images/lord_hanuman.png" alt="">
+                </div>
+                <div class="imgSecond">
+                  <img src="./images/indian_force.png" alt="">
+                  <img src="./images/indian_navi.png" alt="">
+                  <img src="./images/save_mi.png" alt="">
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="GetTuch">
+      <div class="main_div">
+        <div class="contener padding-40 other-contener">
+          <div class="otherHeding">
+            Let's Get in Touch
+          </div>
+          <div class="letBrig">
+            <div class="imgTuch">
+              <img src="./images/about_ge_touch.png" alt="">
+            </div>
+            <div class="info">
+              <span class="contact_info-link">
+                <div class="link-heding">
+                  <a target="_blank" class="" href="https://www.linkedin.com/in/ripunjay-palkhe/">
+                    <span class="contact-link">LinkedIn</span>
+                    <span class="svg-aline">
+                      <svg class="contact_svg" xmlns="http://www.w3.org/2000/svg" width="16" height="26" viewBox="0 0 16 26" fill="none">
+                        <path d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z" fill="#507FA2"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="link-heding">
+                  <a href="mailto:palkheripunjay01@gmail.com" style="text-transform: none;" target="_blank">
+                    <span class="contact-link">Email</span>
+                    <span class="svg-aline">
+                      <svg class="email_svg" xmlns="http://www.w3.org/2000/svg" width="16" height="26" viewBox="0 0 16 26" fill="none">
+                        <path d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z" fill="#507FA2"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="main_div mainPadding-56">
+        <div class="contener footer-div">
+          <div class="copyRight">© 2024 Ripunjay Palkhe.</div>
+          <div class="menu">
+            <ul>
+              <li><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+              <li id="aboutLink3">About</li>
+              <li id="contactRedirectBtn"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+   document.getElementById('aboutLink1').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink2').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink3').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+     function back1() {
+         history.back()
+     }
+
+     function openMenu(){
+     
+        let isMenuOpen = false;
+
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          document.body.classList.toggle('no-scroll', isMenuOpen);
+          console.log('isMenuOpen:', isMenuOpen);
+          console.log('classList:', document.body.classList);
+        });
+      }
+      document.getElementById('contactRedirectBtn').addEventListener('click', function() {
+            window.location.href = 'index.html#contact';
+        });
+    </script>
+  </body>
+</html>
