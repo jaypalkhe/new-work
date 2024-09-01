@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ripunjay</title>
+    <title>Ripunjaypalkhe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/jpg" href="images/favicon-01.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -95,9 +96,18 @@
       color: var(--menu-text-color);
       cursor: pointer !important;
     }
+    ul li a:hover{
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #111111;
+      cursor: pointer !important;
+    }
     ul li:hover{
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 16px;
+      line-height: 24px;
       font-weight: 400;
       color: #111111;
       top: 8px;
@@ -128,7 +138,20 @@
       /* text-align: left; */
       color: var(--accent-color);
       position: relative;
-      top: -2px;
+      top: -1px;
+      gap: 8px;
+    }
+    .downloas_cv_text_2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      /* text-align: left; */
+      color: var(--accent-color);
+      position: relative;
+      top: -1px;
       gap: 8px;
     }
    
@@ -137,6 +160,58 @@
       justify-content: center;
       align-items: center;
     }
+    
+    /* Sliding border effect */
+    .downloas_cv_text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; /* Match border-radius of the text container */
+    }
+
+    /* .downloas_cv_text:hover::before {
+        transform: scaleX(1);
+    }
+
+    .downloas_cv_text:hover {
+        color: #fff;
+    }
+
+     
+      .downloas_cv_text_2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 86%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; 
+    } */
+
+    /* .downloas_cv_text_2:hover::before {
+        transform: scaleX(1);
+    }
+
+    .downloas_cv_text_2:hover {
+        color: #fff;
+    }
+
+    .downloas_cv_text:hover.downloas_cv_svg_2 {
+    transform: rotate(90deg);
+    } */
 
     /* banner div */
     .alignment {
@@ -145,14 +220,15 @@
       align-items: center;
     }
     .gradient-text {
-      background: linear-gradient(
+          background:linear-gradient(
           86deg,
-          #0f3058 0%,
-          #0c3a6f 0.01%,
-          #0561c4 29.9%,
-          #11181c 35.33%,
-          #0254ad 33.33%,
-          #11181c 50%,
+          #0f3058 11%,
+          #0c3a6f 9.01%,
+          #0561c4 40%,
+          #11181c 80%,
+          #0254ad 10%,
+          #11181c 100%,
+          #0561c4 8%,
           #11181c 100%
         ),
         linear-gradient(0deg, #11181c 37%, rgba(17, 24, 28, 0) 45%);
@@ -354,7 +430,7 @@
     }
 
     .img_photography {
-      width: 94%;
+      width: 80%;
       height: auto;
     }
 
@@ -555,8 +631,12 @@
     }
     .class_postion {
       position: relative !important;
-      width: 48% !important;
+      width: 94% !important;
       height: auto;
+      display: block;
+    }
+    .class_postion2 {
+      display: none;
     }
     .getTouch {
       padding-bottom: 40px;
@@ -580,7 +660,7 @@
       justify-content: center;
       align-items: center;
       font-family: "Poppins", sans-serif;
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 32px;
       text-align: left;
@@ -591,10 +671,11 @@
     }
     .svg-aline {
       position: relative;
-      top: 6px;
+      top: 5px;
     }
     .contact-link {
-      color: #507fa2;
+      color: #006ADC;
+      padding-right: 8px;
     }
     .personal-img {
       width: 32%;
@@ -669,15 +750,64 @@
 body.no-scroll {
     overflow: hidden !important;
 }
+.gap_24{
+  gap: 24px;
+}
+  .padd-tb-24{
+    padding-bottom: 24px;
+  }
+  .bannerImg{
+  background-image: url(./images/banner_img2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* position: absolute; */
+}
+.bannerImg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 32%); /* Adjust rgba values for color and opacity */
+  z-index: 1; /* Ensure it sits on top of the background image */
+}
+
+.bannerImg > * {
+  position: relative;
+  z-index: 2; /* Ensure content sits above the overlay */
+}
+.postion-ContactInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content:center;
+  align-items: baseline;
+  padding-left: 20px;
+}
+.gotAny{
+     display: flex;
+    justify-content: center;
+    font-family: "Poppins",sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+
+    }
     @media (max-width: 1210px) {
       .contener-header {
         width: auto;
         margin: 0 30px;
       }
       .contener {
-        width: auto;
+        width: 994px;
         margin: 0 60px;
         position: relative;
+      }
+      .banner-tab-contene{
+        width: 994px !important;
       }
       .hoverAnimation {
         width: auto;
@@ -687,7 +817,7 @@ body.no-scroll {
         height: auto;
       }
       .link-heding {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 28px;
       }
       .pesonal-RP {
@@ -710,7 +840,9 @@ body.no-scroll {
         height: 100%;
         padding-right: 0px !important;
       }
-
+      .bannerSVG_tablet{
+        display: block;
+      }
       .banner_contener {
         width: auto;
       }
@@ -835,7 +967,31 @@ body.no-scroll {
         width: 50%;
       }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 786px) {
+      .hover07 img.hidden {
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-transition: opacity 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover07 img:first-child {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
+
+        .hover07 img.hidden {
+          opacity: 1;
+        }
+        .hover07 .hover-second-image-over-first-image {
+          opacity: 1;
+        }
+        .hover07 div img {
+        -webkit-filter: blur(0);
+          filter: blur(0);
+      }
       .contact_info-link {
         flex-direction: column;
         gap: 24px;
@@ -1034,327 +1190,355 @@ body.no-scroll {
     color: #F5F5F5;
   }
   
-}
+    }
 
-@media (max-width: 585px) {
-      #Banner {
-        margin-top: 45px;
+  @media (max-width: 585px) {
+        #Banner {
+          margin-top: 45px;
+        }
+        .banner_contener {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .bigniYourIdea{
+          width:auto;
+        }
+        .content_img{
+          width: auto;
+        }
+        .contener {
+          padding: 0 16px;
+        }
+        .grid-container {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .hoverAnimation {
+          height: 178px;
+        }
+        .bothImg {
+          flex-direction: column;
+        }
+        /* .mobile-height {
+          height: 352px;
+        } */
+        .mobile-height {
+          /* height: auto; */
+          margin-top: 24px;
+        }
+        .mobile-height-2{
+          margin-top: 24px;
+          width: auto;
+          height: 352px;
+          /* top: 1554px;
+          left: 16px;
+          gap: 0px; */
+          border-radius: 8px 0px 0px 0px;
+          /* opacity: 0px; */
+        }
+        
+        .img_photography{
+          width: 96%;
+          height: auto;
+          justify-content: center;
+          align-items: center;
+        }
+        .Div_imgPhotography {
+          /* width: auto; */
+          /* padding: 35px; */
+          width: 328px;
+          margin: auto;
+          height: 178px;
+          top: 1070px;
+          left: 16px;
+          gap: 0px;
+          border-radius: 8px 0px 0px 0px;
       }
-      .banner_contener {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+
+      .contact-link {
+      padding-right: 0px;
       }
-      .bigniYourIdea{
-        width:auto;
+
+      .padd-tb-24{
+        padding-bottom: 0px;
       }
-      .content_img{
-        width: auto;
+
+      .contact_info-link{
+        flex-direction:row;
+        padding-left: 0px;
+        gap: 16px;
       }
-      .contener {
-        padding: 0 16px;
+      .personalDetail{
+        width: 60%;
+        gap: 8px;
+        padding-left: 8px;
       }
-      .grid-container {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .hoverAnimation {
-        height: 178px;
-      }
-      .bothImg {
-        flex-direction: column;
-      }
-      /* .mobile-height {
-        height: 352px;
-      } */
-      .mobile-height {
-        /* height: auto; */
-        margin-top: 24px;
-      }
-      .mobile-height-2{
-        margin-top: 24px;
-        width: auto;
+
+      .Div_imgPhotography_2{
+        margin: auto;
+        width: 328px;
         height: 352px;
         /* top: 1554px;
-        left: 16px;
-        gap: 0px; */
+        left: 16px; */
+        gap: 0px;
         border-radius: 8px 0px 0px 0px;
         /* opacity: 0px; */
 
       }
-      .img_photography{
-        width: 96%;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-      }
-      .Div_imgPhotography {
-        /* width: auto; */
-        /* padding: 35px; */
-        width: 328px;
-        margin: auto;
-        height: 178px;
-        top: 1070px;
-        left: 16px;
-        gap: 0px;
-        border-radius: 8px 0px 0px 0px;
-     }
-     .contact_info-link{
-      flex-direction:column;
-      padding-left: 8px;
-     }
-     .personalDetail{
-      width: 60%;
-      gap: 8px;
-      padding-left: 8px;
-     }
+      /* .hoverAnimation{
+        display: none;
+        z-index: -10;
+      } */
 
-     .Div_imgPhotography_2{
-      margin: auto;
-      width: 328px;
-      height: 352px;
-      /* top: 1554px;
-      left: 16px; */
-      gap: 0px;
-      border-radius: 8px 0px 0px 0px;
-      /* opacity: 0px; */
+        .class_postion2 {
+          width: 94% !important;
+          display: block;
+        }
+        .class_postion {
+          display: none;
+        }
+        .SecondHighlight_work{
+          padding-top: 48px;
+        }
+        .hover07 img.hidden {
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-transition: opacity 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out;
+        }
 
-     }
-     /* .hoverAnimation{
-      display: none;
-      z-index: -10;
-     } */
+        .hover07 img:first-child {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
 
-      .class_postion {
-        width: 80% !important;
-      }
-      .SecondHighlight_work{
-        padding-top: 48px;
-      }
-      .hover07 img.hidden {
-        opacity: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        -webkit-transition: opacity 0.3s ease-in-out;
-        transition: opacity 0.3s ease-in-out;
-      }
-
-      .hover07 img:first-child {
+        .hover07 img.hidden {
+          opacity: 1;
+        }
+        .hover07 .hover-second-image-over-first-image {
+          opacity: 1;
+        }
+        .hover07 div img {
         -webkit-filter: blur(0);
-        filter: blur(0);
+          filter: blur(0);
       }
-
-      .hover07 img.hidden {
-        opacity: 1;
-      }
-      .hover07 .hover-second-image-over-first-image {
-        opacity: 1;
-      }
-      .getTouch {
-        text-align: left;
-      }
-      .Desktop_menu {
-        display: none;
-      }
-      .first {
-        height: 152px;
-      }
-      .second,
-      .third {
-        height: auto;
-        padding: 10px;
-        width: auto;
-      }
-      .headline_text-cv {
-        font-size: 28px;
-        line-height: 40px;
-      }
-      .padding-72 {
-        margin: 16px;
-      }
-      .imageOverText {
-        background-size: cover; /* <------ */
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
-      .getTouch {
+        .getTouch {
+          text-align: left;
+        }
+        .Desktop_menu {
+          display: none;
+        }
+        .first {
+          height: 152px;
+        }
+        .second,
+        .third {
+          height: auto;
+          padding: 10px;
+          width: auto;
+        }
+        .headline_text-cv {
+          font-size: 28px;
+          line-height: 40px;
+        }
+        .headline_text:hover {
         font-size: 20px;
         line-height: 28px;
-        padding-bottom: 32px;
       }
-      .footer-div{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 32px;
-     }
-     .headLineDi {
-        width: auto;
-        height: auto;
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .discriptionText{
 
-        font-size: 14px;
-        line-height: 22px;
-        padding-right: 16px;
+        .padding-72 {
+          margin: 16px;
+        }
+        .imageOverText {
+          background-size: cover; /* <------ */
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+        .getTouch {
+          font-size: 20px;
+          line-height: 28px;
+          padding-bottom: 32px;
+        }
+        .footer-div{
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 32px;
+      }
+      .headLineDi {
+          width: auto;
+          height: auto;
+          font-size: 14px;
+          line-height: 22px;
+      }
+      .discriptionText{
+
+          font-size: 14px;
+          line-height: 22px;
+          padding-right: 16px;
+      }
+      .arrow{
+          height: 24px;
+          width: 24px;
+          position: relative;
+          top: 7px;
+      }
+      .download_svg {
+          height: 30px;
+          width: 30px;
+      }
+      .contact-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
-    .arrow{
-        height: 24px;
-        width: 24px;
-        position: relative;
-        top: 7px;
+    .contact_Image{
+        width: 140px;
     }
-    .download_svg {
-        height: 30px;
-        width: 30px;
-    }
-    .contact-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-   }
-   .contact_Image{
-       width: 140px;
-   }
-   .personal-img {
-        width: 100px;
-    }
-    .pesonal-RP {
-        font-size: 18px;
-        line-height: 26px;
-        width: auto;
-    }
-    .personal-disc {
-        font-size: 14px;
-        line-height: 22px;
-        width: auto;
-    }
-    .personal-info {
-        padding: 0;
-        padding-bottom: 14px;
-        padding-top: 14px;
-    }
-    .link-heding {
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .svg-aline{
-      top: 4px;
-      padding-left: 8px;
-    }
-    .contact_svg {
-        height: 19px;
-        width: 11px;
-    }
-    .email_svg {
-        height: 19px;
-        width: 11px;
-    }
-    .third{
-        align-self: auto;
-    }
-    .headertClick{
-      margin: 20px 0 8px 0;
-    }
-    .btn_main{
-      gap: 8px;
-    }
-    .headline_text{
-      font-size: 20px;
-      line-height: 28px;
-    }
-    .download{
-      gap: 8px;
-      /* justify-content: center; */
-    }
-    .btn {
-        /* padding: 5px 17px; */
-        padding: 8px 8px;
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .h1 {
-        text-align: left;
+    .personal-img {
+          width: 100px;
+      }
+      .pesonal-RP {
+          font-size: 18px;
+          line-height: 26px;
+          width: auto;
+      }
+      .personal-disc {
+          font-size: 14px;
+          line-height: 22px;
+          width: auto;
+      }
+      .personal-info {
+          padding: 0;
+          padding-bottom: 14px;
+          padding-top: 14px;
+      }
+      .link-heding {
+          font-size: 16px;
+          line-height: 26px;
+      }
+      .svg-aline{
+        top: 2px;
+        padding-left: 2px;
+      }
+      .contact_svg {
+          height: 19px;
+          width: 11px;
+      }
+      .email_svg {
+          height: 19px;
+          width: 11px;
+      }
+      .third{
+          align-self: auto;
+      }
+      .headertClick{
+        margin: 20px 0 8px 0;
+      }
+      .btn_main{
+        gap: 8px;
+      }
+      .headline_text{
         font-size: 20px;
         line-height: 28px;
-        padding-bottom: 32px;
-    }
-    .logo{
-        height: 40px;
-        width: 40px;
-    }
-    /* .mobile-padding{
-      padding: 132px;
-    } */
-    .res_mobile{
-      display: block;
-    }
-   
-    .destop{
+      }
+      .download{
+        gap: 8px;
+        /* justify-content: center; */
+      }
+      .btn {
+          /* padding: 5px 17px; */
+          padding: 8px 8px;
+          font-size: 14px;
+          line-height: 22px;
+      }
+      .h1 {
+          text-align: left;
+          font-size: 20px;
+          line-height: 28px;
+          padding-bottom: 32px;
+      }
+      .logo{
+          height: 40px;
+          width: 40px;
+      }
+      /* .mobile-padding{
+        padding: 132px;
+      } */
+      .res_mobile{
+        display: block;
+      }
+      .postion-ContactInfo{
+        align-items: baseline;
+        padding-left: 8px;
+        gap: 24px;
+      }
+      .destop{
+          display: none;
+      }
+      .mobile{
         display: none;
-    }
-    .mobile{
-       display: none;
-    }
-    .bannerSVG{
-      display: none;
-    }
-    .bannerSVG_tablet{
-      display: none;
-    }
-    .bannerSVG_mobile{
-      display: block;
-    }
+      }
+      .bannerSVG{
+        display: none;
+      }
+      .bannerSVG_tablet{
+        display: none;
+      }
+      .bannerSVG_mobile{
+        display: block;
+      }
 
-    .name{
-      
-        font-size: 32px;
-        line-height: 40px
-    }
+      .name{
+        
+          font-size: 32px;
+          line-height: 40px
+      }
 
-    .headLineDi-1{
+      .headLineDi-1{
 
-        font-size: 14px;
-        line-height: 22px;
-    }
+          font-size: 14px;
+          line-height: 22px;
+      }
 
-    .banner-tab-contener {
-        padding-left: 0px !important;
-        padding-right: 16px !important;
-    }
-    .content_info{
-      padding-left: 16px;
-    }
-    .content_info{
-       gap: 24px;
-    }
-    .content {
-      /* margin-top: 32px; */
-        gap:16px;
-    }
-    .contener-header {
-        margin: 0 16px;
-    }
-    .hover07 div img {
-      -webkit-filter: blur(0);
-        filter: blur(0);
-    }
-    .content_img {
-        display: flex;
-        justify-content: flex-start;
-    }
-    img {
-    position: relative;
-    height: auto;
-    width: 100%;
-}
-}
+      .banner-tab-contener {
+          padding-left: 0px !important;
+          padding-right: 16px !important;
+      }
+      .content_info{
+        padding-left: 16px;
+      }
+      .content_info{
+        gap: 24px;
+      }
+      .content {
+        /* margin-top: 32px; */
+          gap:16px;
+      }
+      .contener-header {
+          margin: 0 16px;
+      }
+      .hover07 div img {
+        -webkit-filter: blur(0);
+          filter: blur(0);
+      }
+      .content_img {
+          display: flex;
+          justify-content: flex-start;
+      }
+      img {
+      position: relative;
+      height: auto;
+      width: 100%;
+  }
+  }
+
   </style>
   <body>
     <nav class="Header">
@@ -1362,17 +1546,20 @@ body.no-scroll {
         <div class="contener-header">
           <div class="contener">
             <div class="menu_bar">
-              <div class="logo">
-                <img src="images/ripunjay logo-01 1 (1).png" alt="" />
+              <div class="logo" (onClick)="logoRedirect()">
+                <a href="index.html" class="menu-link" >
+                    <img src="images/ripunjay logo-01 1 (1).png" alt="" />
+                </a>
               </div>
-              <div class="Desktop_menu" class="menu">
-                <ul>
-                  <li class="pointer wok"><a href="#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
-                  <li class="pointer" id="aboutLink1">About</li>
-                  <li class="pointer"><a href="#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
-                </ul>
-              </div>
-              <div class="download_cv Desktop_menu">
+            
+              <div class="download_cv Desktop_menu gap_24">
+                <div class="Desktop_menu" class="menu">
+                  <ul>
+                    <li class="pointer wok"><a href="#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                    <li class="pointer" id="aboutLink1">About</li>
+                    <li class="pointer"><a href="#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                  </ul>
+                </div>
                 <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
                   <span class="downloas_cv_text">Download CV</span>
                   <span class="downloas_cv_svg">
@@ -1441,7 +1628,7 @@ body.no-scroll {
       </div>
     </nav>
     <section id="Banner">
-      <div class="main_div alignment">
+      <div class="main_div alignment bannerImg">
         <div class="contener banner-tab-contener">
           <div class="content banner_contener">
             <div class="content_info">
@@ -1457,24 +1644,9 @@ body.no-scroll {
               </div>
               <div>
                 <a class="download" href="#ContactUS" class="menu-link" data-target="ContactUS">
-                  <span class="downloas_cv_text">Contact me
+                  <span class="downloas_cv_text_2">Contact me
                     <span class="downloas_cv_svg_2">
-                        <!-- <svg
-                          class="width-24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="20"
-                          viewBox="0 0 12 20"
-                          fill="none"
-                        >
-                          <path
-                            d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
-                            fill="#006ADC"
-                          />
-                        </svg> -->
-                        <!-- <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                          <path d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z" fill="#006ADC"/>
-                       </svg> -->
+                     
                        <svg
                        class="width-24"
                        xmlns="http://www.w3.org/2000/svg"
@@ -1500,12 +1672,13 @@ body.no-scroll {
             </div>
           </div>
           <div class="banner_img">
-            <img class="bannerSVG" src="./images/banner image for portfolio website.png" alt="">
+            <!-- <img class="bannerSVG" src="./images/banner image for portfolio website.png" alt=""> -->
             <img class="bannerSVG_mobile" src="./images/mobile_image_2.png" alt="">
             <img class="bannerSVG_tablet" src="./images/tablet_image_1.png" alt="">
           </div>
         </div>
       </div>
+      <!-- <img class="bannerSVG" src="./images/banner image for portfolio website.png" alt=""> -->
     </section>
     <section id="Highlighted_Works">
       <div class="main_div mainPadding-56">
@@ -1520,7 +1693,7 @@ body.no-scroll {
               <a class="download" href="./photoGraohicCaseStudy.html">
                 <span class="headline_text gradient-text-headline">
                     Captured Moments 
-                    <span class="downloas_cv_svg">
+                    <!-- <span class="downloas_cv_svg">
                         <svg
                           class="arrow"
                           width="32"
@@ -1534,7 +1707,7 @@ body.no-scroll {
                             fill="#4F6F82"
                           />
                         </svg>
-                      </span>
+                      </span> -->
                 </span>
                
               </a>
@@ -1543,16 +1716,47 @@ body.no-scroll {
               Photography website featuring services showcased in the hero
               section.
             </div>
-            <div class="hoverAnimation hover07 mobile-height">
+            <div class="hoverAnimation pointer hover07 mobile-height" id="abc2">
               <div class="Div_imgPhotography mobile-padding">
                 <!-- <div class="hover-second-image-over-first-image"></div>
                             <div class="hover08"></div> -->
                 <div class="bothImg">
                   <img
                     class="img_photography"
-                    src="./images/Group 603.png"
+                    src="./images/Comp 1 final gif of photograph.gif"
                     alt=""
                   />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="SecondHighlight_work">
+            <div class="btn_main">
+              <button class="btn">Website design</button>
+              <button class="btn">Case study</button>
+            </div>
+            <div class="headertClick">
+              <a class="download" href="./CredibilityCaseStudy.html">
+                <span class="headline_text gradient-text-headline">
+                  Credibility
+                    <!-- <span class="downloas_cv_svg">
+                        <svg class="arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                           <path d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z" fill="#4F6F82"/>
+                        </svg>
+                    </span> -->
+                </span>
+               
+              </a>
+            </div>
+            <div class="headLineDi-1 padd-tb-24">
+              Redesigning the Credibility website to showcase services and enhance user engagement.
+            </div>
+            <div class="hoverAnimation pointer hover07 mobile-height" id="abc1">
+              <div class="Div_imgPhotography mobile-padding">
+               
+                <div class="bothImg">
+                  <img class="img_photography" src="./images/Credibility.gif" alt="" />
                 </div>
               </div>
             </div>
@@ -1565,10 +1769,10 @@ body.no-scroll {
               <button class="btn">Case study</button>
             </div>
             <div class="headertClick">
-              <a class="download" href="www.google.com">
+              <a class="download" href="./bookmarkCaseStudy.html">
                 <span class="headline_text gradient-text-headline"> 
                     Bookmarked Moments: A Digital Repository
-                    <span class="downloas_cv_svg">
+                    <!-- <span class="downloas_cv_svg">
                         <svg
                           class="arrow"
                           width="32"
@@ -1582,7 +1786,7 @@ body.no-scroll {
                             fill="#4F6F82"
                           />
                         </svg>
-                      </span>
+                      </span> -->
                 </span>
                
               </a>
@@ -1591,25 +1795,31 @@ body.no-scroll {
               Crafting a digital space for your treasured memories – a website
               and web app combo dedicated to your online memory hub.
             </div>
-            <div class="hoverAnimation hover07 mobile-height-2">
+            <div class="hoverAnimation pointer hover07 mobile-height-2" id="abc">
               <div class="Div_imgPhotography_2">
                 <!-- <div class="hover-second-image-over-first-image"></div>
                             <div class="hover08"></div> -->
                 <div class="bothImg">
                   <img
                     class="class_postion"
-                    src="./images/bookmark1.png"
+                    src="./images/New_image_case_study.png"
                     alt=""
                   />
                   <img
+                  class="class_postion2"
+                  src="./images/New_image_Case_Study_Mobile.png"
+                  alt=""
+                />
+                  <!-- <img
                     class="class_postion"
                     src="./images/bookmark2.png"
                     alt=""
-                  />
+                  /> -->
                 </div>
               </div>
             </div>
           </div>
+         
         </div>
       </div>
     </section>
@@ -1642,48 +1852,80 @@ body.no-scroll {
             </div>
             <div class="grid-item second">
               <div class="contact-info">
-                <span class="contact_info-link">
-                  <div class="link-heding">
-                    <a target="_blank" class="" href="https://www.linkedin.com/in/ripunjay-palkhe/">
-                      <span class="contact-link">LinkedIn</span>
-                      <span class="svg-aline">
-                        <svg
-                          class="contact_svg"
+                <div class="postion-ContactInfo">
+                  <div class="gotAny pesonal-RP">
+                      Got Any Ideas
+                  </div>
+                  <span class="contact_info-link">
+                    <div class="link-heding">
+                      <a target="_blank" class="" href="https://www.linkedin.com/in/ripunjay-palkhe/">
+                        <span class="contact-link">LinkedIn</span>
+                        <span class="svg-aline">
+                          <!-- <svg
+                            class="contact_svg"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 26"
+                            fill="none"
+                          >
+                            <path
+                              d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z"
+                              fill="#507FA2"
+                            /> -->
+                            <svg
+                            class="width-24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="20"
+                            viewBox="0 0 12 20"
+                            fill="none"
+                          >
+                            <path
+                              d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                              fill="#006ADC"
+                            />
+                          </svg>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                    <div class="link-heding">
+                      <a href="mailto:palkheripunjay01@gmail.com" style="text-transform: none;" target="_blank">
+                        <span class="contact-link">Email</span>
+                        <span class="svg-aline">
+                          <!-- <svg
+                            class="email_svg"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 26"
+                            fill="none"
+                          >
+                            <path
+                              d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z"
+                              fill="#507FA2"
+                            />
+                          </svg> -->
+                          <svg
+                          class="width-24"
                           xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="26"
-                          viewBox="0 0 16 26"
+                          width="12"
+                          height="20"
+                          viewBox="0 0 12 20"
                           fill="none"
                         >
                           <path
-                            d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z"
-                            fill="#507FA2"
+                            d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                            fill="#006ADC"
                           />
                         </svg>
-                      </span>
-                    </a>
-                  </div>
-                  <div class="link-heding">
-                    <a href="mailto:palkheripunjay01@gmail.com" style="text-transform: none;" target="_blank">
-                      <span class="contact-link">Email</span>
-                      <span class="svg-aline">
-                        <svg
-                          class="email_svg"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="26"
-                          viewBox="0 0 16 26"
-                          fill="none"
-                        >
-                          <path
-                            d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z"
-                            fill="#507FA2"
-                          />
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </span>
+                        </span>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                
                 <img
                   class="contact_Image"
                   src="./images/contactMe.png"
@@ -1691,7 +1933,7 @@ body.no-scroll {
                 />
               </div>
             </div>
-            <div class="grid-item third">
+            <div id="aboutLink4" class="grid-item third pointer">
               <div class="personal-info">
                 <span class="personalDetail">
                   <span class="pesonal-RP">Ripunjay Palkhe</span>
@@ -1736,6 +1978,23 @@ body.no-scroll {
     document.getElementById('aboutLink3').addEventListener('click', function() {
        window.location.href = './aboutUs.html';
     });
+    document.getElementById('aboutLink4').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    
+    document.getElementById('abc').addEventListener('click', function() {
+       window.location.href = './bookmarkCaseStudy.html';
+    });
+
+    document.getElementById('abc1').addEventListener('click', function() {
+       window.location.href = './CredibilityCaseStudy.html';
+    });
+
+    document.getElementById('abc2').addEventListener('click', function() {
+       window.location.href = './photoGraohicCaseStudy.html';
+    });
+
+
     function openMenu(){
      
        let isMenuOpen = false;
@@ -1760,6 +2019,7 @@ body.no-scroll {
          });
        });
      });
+   
      document.addEventListener('DOMContentLoaded', function() {
        const workMenuItem = document.querySelector('.wok1');
 

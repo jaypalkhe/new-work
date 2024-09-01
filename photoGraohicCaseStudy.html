@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ripunjay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/jpg" href="images/favicon-01.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -90,11 +91,15 @@
       text-align: left;
       color: var(--menu-text-color);
       cursor: pointer !important;
+      text-decoration: none;
+    }
+    ul li a:hover{
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
     }
     ul li:hover{
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
       color: #111111;
       top: 8px;
       animation-timing-function: ease-out;
@@ -123,9 +128,37 @@
       line-height: 24px;
       color: var(--accent-color);
       position: relative;
-      top: -2px;
+      top: -1px;
       gap: 8px;
     }
+
+     /* Sliding border effect */
+     .downloas_cv_text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; /* Match border-radius of the text container */
+    }
+
+    /* .downloas_cv_text:hover::before {
+        transform: scaleX(1);
+    }
+
+    .downloas_cv_text:hover {
+        color: #fff; 
+    }
+    .downloas_cv_text:hover.downloas_cv_svg_2 {
+    transform: rotate(90deg);
+    } */
+
    
     .logo-nav{
       width: 100%;
@@ -184,8 +217,24 @@ body.no-scroll {
     align-items: center;
     position: relative;
     gap: 8px;
-   
+    /* color: #687076; */
 }
+  /* .backButton :hover{
+  color: #000000;
+
+  }
+  .backButton .fil :hover{
+  color: #000000;
+  } */
+  .InerBack{
+    color: #687076;
+  }
+  .InerBack:hover{
+    color: #000000;
+  }
+  .InerBack ~ .fil:hover{
+    fill: #000000;
+  }
     .backButton{
         padding-top: 24px ;
         padding-bottom: 24px;
@@ -201,17 +250,36 @@ body.no-scroll {
     line-height: 24px;
     text-align: center;
     position: relative;
-    bottom: 1px;
+    bottom: 4px;
+    padding-left: 8px;
+   
+}
+.backButtonText:hover{
+  color: #000000;
 }
 
 /* back button end */
 .headline_text{
       font-size: 20px;
       line-height: 28px;
+      /* background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text ;
+      background-clip: text ; */
+      /* color: transparent ; */
     }
     .gradient-text-headline {
       /* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100%);  */
-      background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      /* background: linear-gradient(0deg, #11181c 0%, #315f79 50%, #4f6f82 100%); */
+      background: linear-gradient(90deg, #11181c 7%, #315f79 30%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      top: -4px;
+    }
+    .gradient-text-headline1 {
+      background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #315f79 0%, #315f79 33.333%, #11181c 50%, #11181c 100%); 
+      /* background: linear-gradient(0deg, #11181c 0%, #315f79 50%, #4f6f82 100%); */
+      /* background: linear-gradient(8deg, #11181c 7%, #315f79 30%, #4f6f82 100%); */
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -243,7 +311,7 @@ body.no-scroll {
     }
     .bannerImg{
         background-color: #F7F7F7;
-        margin:  24px 0 32px 0px;
+        margin:  24px 0 40px 0px;
         padding: 26px 28px;
     }
     .bannerImg-img{
@@ -282,11 +350,11 @@ body.no-scroll {
         display: flex;
         gap: 75px;
         justify-content: flex-start;
-        align-items: center;
+        align-items: start;
         padding-bottom: 64px;
     }
     .alineItem{
-        align-items: baseline;
+        align-items: start;
     }
     .caseStudy-heading{
         font-family: "Poppins", sans-serif;
@@ -295,7 +363,7 @@ body.no-scroll {
         line-height: 28px;
         text-align: left;
         color: #464D4E;
-        width: 16%;
+        width: 32%;
     }
     .caseStudy-des{
         font-family: "Poppins", sans-serif;
@@ -318,7 +386,7 @@ body.no-scroll {
     .caseStudyInner-des{
         font-family: "Poppins",sans-serif;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 24px;
         text-align: left;
         padding-bottom: 8px;
@@ -328,7 +396,7 @@ body.no-scroll {
         padding-bottom: 24px;
     }
     .dd_img{
-        padding:24px 14px;
+        /* padding-top: 24px; */
     }
     .dd_img-img{
         width: 100%;
@@ -364,13 +432,10 @@ body.no-scroll {
       font-weight: 500;
       line-height: 40px;
       text-align: left;
-      color: var(--accent-color);
+      /* color: var(--accent-color); */
       position: relative;
       top: -2px;
-      /* background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent; */
+  
     }
     .downloas_cv_svg .top-8 {
       color: #c3ddec;
@@ -390,8 +455,43 @@ body.no-scroll {
       line-height: 24px;
       text-align: left;
       color: #687076;
-     
+      width: 750px;
     }
+    .gap_24{
+  gap: 24px;
+}
+.photoCity {
+  display: none;
+}
+
+.download:hover + .photoCity {
+  display: block;
+}
+.nextCaseStudy{
+    display: flex;
+    justify-content: space-between;
+}
+.photoCity{
+    width: 30%;
+    height: auto;
+}
+.photoCity1 {
+  display: none;
+}
+.BookHover1:hover + .photoCity1 {
+  display: block;
+}
+
+.photoCity1{
+    width: 30%;
+    height: auto;
+}
+.pointer{
+      cursor: pointer;
+  }
+  .padd-to-40{
+    padding-top: 40px;
+}
     @media (max-width: 1210px) {
       .contener-header {
         width: auto;
@@ -411,7 +511,9 @@ body.no-scroll {
          padding-right: 25px;
          padding-left: 25px;
       }
-      
+      /* .headLineDi{
+        width: 750px;
+      } */
     }
     @media (max-width: 1100px) {
      
@@ -427,11 +529,11 @@ body.no-scroll {
         font-size: 28px;
         font-weight: 500;
         line-height: 36px;
-        background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+        
       }
+      /* .headLineDi{
+        width: 750px;
+      } */
     
     }
 
@@ -446,7 +548,9 @@ body.no-scroll {
       .destop {
         display: none;
       }
-    
+       .headLineDi{
+        width: 100%;
+      }
       
     }
     @media (max-width: 950px) {
@@ -627,85 +731,91 @@ body.no-scroll {
         gap: 70px;
         margin: 32px 0 56px 0;
     }
+    .caseStudy-des {
+      width: 100%;
+    }
     }
 
-@media (max-width: 585px) {
-     
-      .bigniYourIdea{
-        width:auto;
-      }
-     
-      .contener {
-        padding: 0 16px;
-      }
-      .backButton{
-        padding-top: 24px ;
-        padding-bottom: 24px;
-      }
-      .paddingSet{
-         padding-right: 16px;
-         padding-left: 16px;
-      }
-     
-      .Desktop_menu {
-        display: none;
-      }
-     
+    @media (max-width: 585px) {
+        
+          .bigniYourIdea{
+            width:auto;
+          }
+        
+          .contener {
+            padding: 0 16px;
+          }
+          .backButton{
+            padding-top: 24px ;
+            padding-bottom: 24px;
+          }
+          .paddingSet{
+            padding-right: 16px;
+            padding-left: 16px;
+          }
+        
+          .Desktop_menu {
+            display: none;
+          }
+        
+        
+          .footer-div{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 32px;
+        }
+      
+        .headline_text{
+          background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+      
+        .arrow{
+            height: 24px;
+            width: 24px;
+            position: relative;
+            top: 7px;
+        }
     
-      .footer-div{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
+        .download{
+          gap: 8px;
+        }
+      
+        .logo{
+            height: 40px;
+            width: 40px;
+        }
+        
+        .destop{
+            display: none;
+        }
+        .mobile{
+          display: none;
+        }
+
+        .contener-header {
+            margin: 0 16px;
+        }
+        .projectDuration{
+            flex-direction: column;
+            gap: 24px;
+            margin: 32px 0 56px 0;
+        }
+        .caseStudy-div{
+            flex-direction: column;
         align-items: flex-start;
-        gap: 32px;
-     }
-   
-  
-    .arrow{
-        height: 24px;
-        width: 24px;
-        position: relative;
-        top: 7px;
-    }
- 
-    .download{
-      gap: 8px;
+        gap: 16px;
+        }
+
+        .caseStudy-heading{
+            width: 100%;
+        }
     }
   
-    .logo{
-        height: 40px;
-        width: 40px;
-    }
-    
-    .destop{
-        display: none;
-    }
-    .mobile{
-       display: none;
-    }
-
-    .contener-header {
-        margin: 0 16px;
-    }
-    .projectDuration{
-        flex-direction: column;
-        gap: 24px;
-        margin: 32px 0 56px 0;
-    }
-    .caseStudy-div{
-        flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    }
-
-    .caseStudy-heading{
-        width: 100%;
-    }
-}
-.pointer{
-    cursor: pointer;
-}
-
   </style>
   <body>
     <nav class="Header">
@@ -714,16 +824,20 @@ body.no-scroll {
           <div class="contener">
             <div class="menu_bar">
               <div class="logo">
-                <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+                <a href="./index.html" class="menu-link" >
+                  <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+              </a>
+                <!-- <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" /> -->
               </div>
-              <div class="Desktop_menu" class="menu">
-                <ul>
-                  <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
-                  <li class="pointer" id="aboutLink1">About</li>
-                  <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
-                </ul>
-              </div>
-              <div class="download_cv Desktop_menu">
+             
+              <div class="download_cv Desktop_menu gap_24">
+                <div class="Desktop_menu" class="menu">
+                  <ul>
+                    <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                    <li class="pointer" id="aboutLink1">About</li>
+                    <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                  </ul>
+                </div>
                 <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
                   <span class="downloas_cv_text">Download CV</span>
                   <span class="downloas_cv_svg">
@@ -795,17 +909,20 @@ body.no-scroll {
         <div class="main_div">
           <div class="contener">
              <div id="BackButton1" class="backButton paddingSet" onClick="back()">
-                 <span class="pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
-                        <path d="M9.98309 19.6542L11.4023 18.2349L3.16784 10.0004L11.4023 1.76593L9.98309 0.34668L0.329342 10.0004L9.98309 19.6542Z" fill="#4F6F82"/>
+                 <span class="InerBack">
+                  <span class="pointer">
+                    <svg class="fil" xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                        <path d="M9.98309 19.6542L11.4023 18.2349L3.16784 10.0004L11.4023 1.76593L9.98309 0.34668L0.329342 10.0004L9.98309 19.6542Z" fill="#687076"/>
                     </svg>
                  </span>
                  <span class="backButtonText pointer">
                     Back
                  </span>
+                 </span>
+              
              </div>
              <div class="captureMoments paddingSet">
-               <span class="headline_text gradient-text-headline">Captured Moments</span>
+               <span class="headline_text gradient-text-headline1">Captured Moments</span>
                <span class="headLineDi-1">Photography website featuring services showcased in the hero section.</span>
              </div>
              <div class="bannerImg">
@@ -865,7 +982,7 @@ body.no-scroll {
                     <div class="caseStudyInner-des">Solution</div>
                     <div class="padd-24">This layout allows visitors to immediately see and navigate to the type of photography they are interested in. The clear labels and organized presentation reduce confusion and help users find relevant information quickly.</div>
                     <div class="dd_img">
-                        <img class="dd_img-img" src="./images/case-2.png" alt="">
+                        <img class="dd_img-img" src="./images/service_image.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -877,7 +994,7 @@ body.no-scroll {
                     <div class="caseStudyInner-des">Solution</div>
                     <div class="padd-24">Clear and compelling calls-to-action are strategically placed to guide users towards interaction. The “Contact” and “Get Quotation” buttons are prominently displayed and easy to access, reducing friction in the user journey.</div>
                     <div class="dd_img">
-                        <img class="dd_img-img" src="./images/case-2.png" alt="">
+                        <img class="dd_img-img" src="./images/button_image.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -911,41 +1028,56 @@ body.no-scroll {
         </div>
     </section>
     <section>
-        <div class="main_div">
-            <div class="contener padding-top-bottom">
-                <div class="p_heding">
-                    <span>Next work</span>
+      <div class="main_div">
+        <div class="contener padding-top-bottom">
+            <div class="p_heding">
+                <span>Next work</span>
+            </div>
+            <div class="nextCaseStudy">
+                <div>
+                    <div class="headertClick">
+                        <a class="download " href="./CredibilityCaseStudy.html">
+                          <span class="headline_text gradient-text-headline"> 
+                            Credibility
+                              <span class="downloas_cv_svg">
+                                  <!-- <svg class="arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                    <path d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z" fill="#4F6F82" />
+                                  </svg> -->
+                               </span>
+                          </span>
+                        </a>
+                    </div>
+                    <div class="headLineDi">
+                      Redesigning the Credibility website to showcase services and enhance user engagement.
+                    </div>
                 </div>
-                <div class="headertClick">
-                    <a class="download" href="www.google.com">
-                      <span class="headline_text gradient-text-headline"> 
-                          Bookmarked Moments: A Digital Repository
-                          <span class="downloas_cv_svg">
-                              <svg
-                                class="arrow"
-                                width="32"
-                                height="32"
-                                viewBox="0 0 32 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z"
-                                  fill="#4F6F82"
-                                />
-                              </svg>
-                            </span>
-                      </span>
-                     
-                    </a>
-                  </div>
-                  <div class="headLineDi">
+                <img class="photoCity1" src="./images/photograpyBanner.png" alt="">
+            </div>
+          
+            <div class="nextCaseStudy">
+                <div>
+                    <div class="headertClick padd-to-40">
+                        <a class="download " href="./bookmarkCaseStudy.html">
+                            <span class="headline_text gradient-text-headline"> 
+                                Bookmarked Moments: A Digital Repository
+                                <span class="downloas_cv_svg">
+                                    <!-- <svg class="arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                        <path d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z" fill="#4F6F82" />
+                                    </svg> -->
+                                </span>
+                            </span> 
+                        </a>
+                    </div>
+                    <div class="headLineDi">
                     Crafting a digital space for your treasured memories – a website
                     and web app combo dedicated to your online memory hub.
-                  </div>
+                    </div>
+                </div>
+                <img class="photoCity" src="./images/photograpyBanner.png" alt="">
             </div>
+            
         </div>
-        
+    </div>  
     </section>
     <footer>
       <div class="main_div mainPadding-56">
@@ -984,10 +1116,30 @@ body.no-scroll {
         hamburgerMenu.addEventListener('click', () => {
           isMenuOpen = !isMenuOpen;
           document.body.classList.toggle('no-scroll', isMenuOpen);
-          console.log('isMenuOpen:', isMenuOpen);
-          console.log('classList:', document.body.classList);
+         
         });
       }
+      const downloadLink = document.querySelector('.BookHover');
+    const photoCityImage = document.querySelector('.photoCity');
+
+    downloadLink.addEventListener('mouseover', () => {
+       photoCityImage.style.display = 'block';
+    });
+
+    downloadLink.addEventListener('mouseout', () => {
+       photoCityImage.style.display = 'none';
+    });
+
+    const downloadLink1 = document.querySelector('.BookHover1');
+    const photoCityImage1 = document.querySelector('.photoCity1');
+
+    downloadLink1.addEventListener('mouseover', () => {
+       photoCityImage1.style.display = 'block';
+    });
+
+    downloadLink1.addEventListener('mouseout', () => {
+       photoCityImage1.style.display = 'none';
+    });
     </script>
   </body>
 </html>

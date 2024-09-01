@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ripunjay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/jpg" href="images/favicon-01.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    :root {
+      --base-color: #f1f1f1;
+      --border: #dee4e8;
+      --accent-color: #006adc;
+      --menu-text-color: #687076;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 10px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+    }
+
+    .Header {
+      width: 100%;
+      z-index: 1111;
+    }
+
+    .main_div {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .contener {
+      width: 1088px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .contener-header {
+      width: 1188px;
+      margin: 0 auto;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu_bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 88px;
+    }
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    ul li {
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+    }
+    ul li a{
+      display: inline;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: var(--menu-text-color);
+      cursor: pointer !important;
+      text-decoration: none;
+    }
+    ul li a:hover{
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
+    ul li:hover{
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
+
+    .download_cv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .downloas_cv_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: var(--accent-color);
+      position: relative;
+      top: -1px;
+      gap: 8px;
+    }
+
+     /* Sliding border effect */
+     .downloas_cv_text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; /* Match border-radius of the text container */
+    }
+
+    /* .downloas_cv_text:hover::before {
+        transform: scaleX(1);
+    } */
+
+    /* .downloas_cv_text:hover {
+        color: #fff; 
+    }
+    .downloas_cv_text:hover.downloas_cv_svg_2 {
+    transform: rotate(90deg);
+    } */
+
+   
+    .logo-nav{
+      width: 100%;
+    }
+
+    .arrow {
+        position: relative;
+        top: 6px;
+        color: #4f6f82;
+    }
+
+  
+   
+
+    .mainPadding-56 {
+      padding: 56px 0;
+    }
+
+    .footer-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .copyRight {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+    }
+
+    .pointer {
+      cursor: pointer !important;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .destop {
+      display: block;
+    }
+ 
+  .hamburger-menu {
+  display: none;
+}
+body.no-scroll {
+    overflow: hidden !important;
+}
+
+/* back button start*/
+.backButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+    /* color: #687076; */
+}
+  /* .backButton :hover{
+  color: #000000;
+
+  }
+  .backButton .fil :hover{
+  color: #000000;
+  } */
+  .InerBack{
+    color: #687076;
+  }
+  .InerBack:hover{
+    color: #000000;
+  }
+  .InerBack ~ .fil:hover{
+    fill: #000000;
+  }
+    .backButton{
+        padding-top: 24px ;
+        padding-bottom: 24px;
+    }
+    .paddingSet{
+        padding-right: 0;
+        padding-left: 0;
+    }
+.backButtonText{
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+    bottom: 4px;
+    padding-left: 8px;
+   
+}
+.backButtonText:hover{
+  color: #000000;
+}
+
+/* back button end */
+.headline_text{
+      font-size: 20px;
+      line-height: 28px;
+      /* background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text ;
+      background-clip: text ; */
+      /* color: transparent ; */
+    }
+    .gradient-text-headline {
+      /* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100%);  */
+      /* background: linear-gradient(0deg, #11181c 0%, #315f79 50%, #4f6f82 100%); */
+      background: linear-gradient(90deg, #11181c 7%, #315f79 30%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      top: -4px;
+    }
+    .gradient-text-headline1 {
+      background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient(90deg, #315f79 0%, #315f79 33.333%, #11181c 50%, #11181c 100%); 
+      /* background: linear-gradient(0deg, #11181c 0%, #315f79 50%, #4f6f82 100%); */
+      /* background: linear-gradient(8deg, #11181c 7%, #315f79 30%, #4f6f82 100%); */
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      top: -4px;
+    }
+    .captureMoments{
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
+    }
+    .headLineDi-1 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      /* width: 568px;
+      height: 24px; */
+    }
+    .non-disclosure-agreement{
+        padding:24px 16px;
+        font-family: "Poppins",sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: #687076;
+        border-radius: 8px;
+        background-color:#F7F7F7;
+    }
+    .bannerImg{
+        background-color: #F7F7F7;
+        margin:  24px 0 40px 0px;
+        padding: 26px 28px;
+        border-radius: 8px;
+    }
+    .bannerImg-img{
+       /* margin: 26px 28px; */
+       width: 100%;
+       height: 100%;
+    } 
+    .projectDuration{
+        display: flex;
+        gap: 88px;
+        margin: 40px 0 72px 0;
+    }
+    .project-header{
+        font-family: "Poppins",sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+        color:#464D4E;
+    }
+    .project-des{
+        font-family: "Poppins",sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #687076;
+    }
+    .roll,.team,.Duration{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    .caseStudy-div{
+        display: flex;
+        gap: 75px;
+        justify-content: flex-start;
+        align-items: start;
+        padding-bottom: 64px;
+    }
+    .alineItem{
+        align-items: start;
+    }
+    .caseStudy-heading{
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: left;
+        color: #464D4E;
+        width: 35%;
+    }
+    .caseStudy-des{
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: #687076;
+        width: 84%;
+    }
+    .p_heding{
+        font-family: "Poppins",sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 40px;
+        text-align: left;
+        color: #11181C;
+        padding-bottom: 40px;
+    }
+    .caseStudyInner-des{
+        font-family: "Poppins",sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        padding-bottom: 8px;
+        color: #464D4E;
+    }
+    .padd-24{
+        padding-bottom: 24px;
+    }
+    .dd_img{
+      width: 100%;
+      background-color: #F7F7F7;
+      border-radius: 8px;
+    }
+    .dd_img-img{
+      width: 100%;
+      border-radius: 8px;
+       
+    }
+    .new_dd_img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 87%;
+      background-color: #F7F7F7;
+      padding: 28px;
+      border-radius: 8px;
+    }
+    .new_dd_img1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 91%;
+      background-color: #F7F7F7;
+      padding: 28px;
+      border-radius: 8px;
+    }
+    .new_dd_img-img{
+      width: 92%;
+      height: auto;
+      border-radius: 8px;
+       
+    }
+    
+    .padd-bt-40{
+       margin-bottom: 40px;
+       border-radius: 8;
+    }
+    .padding-top-bottom{
+
+    }
+    .headertClick {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .headertClick {
+      margin: 0 0 8px 0;
+    }
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .download{
+      gap: 8px;
+    }
+    .headline_text {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: left;
+      /* color: var(--accent-color); */
+      position: relative;
+      top: -2px;
+  
+    }
+    .downloas_cv_svg .top-8 {
+      color: #c3ddec;
+    }
+    .headLineDi-1 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      /* width: 568px;
+      height: 24px; */
+    }
+    .headLineDi {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #687076;
+      width: 750px;
+    }
+    .gap_24{
+  gap: 24px;
+}
+.padd-to-40{
+    padding-top: 40px;
+}
+.pointer{
+    cursor: pointer;
+}
+.photoCity {
+  display: none;
+}
+
+.download:hover + .photoCity {
+  display: block;
+}
+.nextCaseStudy{
+    display: flex;
+    justify-content: space-between;
+}
+.photoCity{
+    width: 30%;
+    height: auto;
+}
+.photoCity1 {
+  display: none;
+}
+.BookHover1:hover + .photoCity1 {
+ 
+  display: block;
+  
+}
+
+.photoCity1{
+    position: absolute;
+    width: 30%;
+    height: auto;
+    right: 1px
+}
+.padd-tp-24{
+    padding-top: 24px;
+}
+    @media (max-width: 1210px) {
+      .contener-header {
+        width: auto;
+        margin: 0 30px;
+      }
+      .contener {
+        width: auto;
+        margin: 0 60px;
+        position: relative;
+      }
+     
+      .backButton{
+        padding-top: 24px ;
+        padding-bottom: 24px;
+      }
+      .paddingSet{
+         padding-right: 25px;
+         padding-left: 25px;
+      }
+      /* .headLineDi{
+        width: 750px;
+      } */
+    }
+
+    @media (max-width: 1100px) {
+     
+
+  
+      .contener {
+        width: auto;
+        margin: 0;
+        padding: 0 60px;
+        position: relative;
+      }
+      .headline_text {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+        
+      }
+      /* .headLineDi{
+        width: 750px;
+      } */
+    
+    }
+
+    @media (max-width: 1000px) {
+      .mobile {
+        display: block;
+        width: 90%;
+        height: auto;
+      }
+    
+    
+      .destop {
+        display: none;
+      }
+       .headLineDi{
+        width: 100%;
+      }
+      
+    }
+
+    @media (max-width: 950px) {
+      .mainPadding-56 {
+        padding: 40px 0;
+      }
+   
+   
+      .contener {
+        padding: 0 25px;
+      }
+    
+  
+    }
+
+    @media (max-width: 700px) {
+     
+      .width-24 {
+        width: 17px;
+        height: 15px;
+      }
+   
+      .arrow {
+        height: 24px;
+        width: 30px;
+      }
+
+      .Desktop_menu {
+        display: none;
+      }
+    /* humberg menu */
+ 
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  #menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #5F6368;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    z-index: 1;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .menu__btn>span,
+  .menu__btn>span::before,
+  .menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5F6368;
+    transition-duration: .25s;
+  }
+
+  .menu__btn>span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu__btn>span::after {
+    content: '';
+    top: 8px;
+  }
+
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+
+
+  .hamburger-menu {
+    position: relative;
+    top: -8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.3s ease;
+    z-index: 24;
+  }
+
+  .menu__box {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    height:0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition: all 1.99s ease;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    height:100%;
+    padding: 80px 16px;
+    width:-webkit-fill-available;
+    
+  }
+  
+  .hammerMain{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    top: 24%;
+    position: relative;
+  }
+  .hammerContener{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .bigniYourIdea{
+    width: 328px;
+    height:auto;
+    border-radius: 8px;
+    background-color: #000000;
+    padding:48px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+  .bigniYourIdea_inner{
+    font-family: "Poppins",sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    color: #F5F5F5;
+  }
+  .projectDuration{
+        gap: 70px;
+        margin: 32px 0 56px 0;
+    }
+    .caseStudy-des {
+      width: 100%;
+    }
+    }
+
+    @media (max-width: 585px) {
+        
+        .bigniYourIdea{
+            width:auto;
+        }
+        
+        .contener {
+            padding: 0 16px;
+        }
+        .backButton{
+            padding-top: 24px ;
+            padding-bottom: 24px;
+        }
+        .paddingSet{
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+        
+        .Desktop_menu {
+            display: none;
+        }
+        
+        
+        .footer-div{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 32px;
+        }
+    
+        .headline_text{
+        background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        }
+    
+        .arrow{
+            height: 24px;
+            width: 24px;
+            position: relative;
+            top: 7px;
+        }
+    
+        .download{
+        gap: 8px;
+        }
+    
+        .logo{
+            height: 40px;
+            width: 40px;
+        }
+        
+        .destop{
+            display: none;
+        }
+        .mobile{
+        display: none;
+        }
+
+        .contener-header {
+            margin: 0 16px;
+        }
+        .projectDuration{
+            flex-direction: column;
+            gap: 24px;
+            margin: 32px 0 56px 0;
+        }
+        .caseStudy-div{
+            flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        }
+
+        .caseStudy-heading{
+            width: 100%;
+        }
+    }
+
+
+  </style>
+  <body>
+    <nav class="Header">
+      <div class="main_div">
+        <div class="contener-header">
+          <div class="contener">
+            <div class="menu_bar">
+              <div class="logo">
+                <a href="./index.html" class="menu-link" >
+                  <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+              </a>
+                <!-- <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" /> -->
+              </div>
+             
+              <div class="download_cv Desktop_menu gap_24">
+                <div class="Desktop_menu" class="menu">
+                  <ul>
+                    <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                    <li class="pointer" id="aboutLink1">About</li>
+                    <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                  </ul>
+                </div>
+                <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                  <span class="downloas_cv_text">Download CV</span>
+                  <span class="downloas_cv_svg">
+                    <svg
+                      class="width-24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="20"
+                      viewBox="0 0 12 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                        fill="#006ADC"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div id="hamburger-menu" class="hamburger-menu" (onClick)="openMenu()">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+          
+                <div class="menu__box" style="opacity: 100%;">
+                  <div class="hammerMain">
+                    <div class="hammerContener">
+                      <div  class="menu">
+                        <ul>
+                          <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                          <li class="pointer" id="aboutLink2">About</li>
+                          <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                        </ul>
+                      </div>
+                      <div class="download_cv">
+                        <a class="download" target="_blank" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
+                          <span class="downloas_cv_text">Download CV</span>
+                          <span class="downloas_cv_svg">
+                            <svg
+                              class="width-24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="12"
+                              height="20"
+                              viewBox="0 0 12 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                                fill="#006ADC"
+                              />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                      <div class="bigniYourIdea">
+                             <span class="bigniYourIdea_inner">let’s bring you’re idea to life</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="Banner">
+        <div class="main_div">
+          <div class="contener">
+             <div id="BackButton1" class="backButton paddingSet" onClick="back()">
+                 <span class="InerBack">
+                  <span class="pointer">
+                    <svg class="fil" xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                        <path d="M9.98309 19.6542L11.4023 18.2349L3.16784 10.0004L11.4023 1.76593L9.98309 0.34668L0.329342 10.0004L9.98309 19.6542Z" fill="#687076"/>
+                    </svg>
+                 </span>
+                 <span class="backButtonText pointer">
+                    Back
+                 </span>
+                 </span>
+              
+             </div>
+             <div class="captureMoments paddingSet">
+               <span class="headline_text gradient-text-headline1">Credibility</span>
+               <span class="headLineDi-1">Redesigning the Credibility website to showcase services and enhance user engagement.</span>
+             </div>
+             <div class="bannerImg">
+                <img class="bannerImg-img" src="./images/Group 618.jpg" alt="">
+             </div>
+             <div class="non-disclosure-agreement">
+                <span>
+                    To follow the non-disclosure agreement, I have removed and hidden confidential details and the project name in this case study. All information here is my own and may not reflect the views of the Client or ArrayPointer. 
+                </span>
+             </div>
+             <div class="projectDuration">
+                 <div class="roll">
+                     <span class="project-header">Role</span>
+                     <span class="project-des">UX Designer, UX Researcher, UI Designer</span>
+                 </div>
+                 <div class="team">
+                     <span class="project-header">Team</span>
+                     <span class="project-des">Solo</span>
+                 </div>
+                 <div class="Duration">
+                     <span class="project-header">Duration</span>
+                     <span class="project-des">2 week</span>
+                 </div>
+             </div>
+             <div class="caseStudy-div">
+                 <div class="caseStudy-heading">Problem </div>
+                 <div class="caseStudy-des">Redesign of the Hero Section on the Credibility Website</div>
+             </div>
+             <div class="caseStudy-div">
+                <div class="caseStudy-heading">Objective </div>
+                <div class="caseStudy-des">To create an engaging and informative hero section that effectively communicates Credibility value proposition and services, boosts user engagement, and encourages potential clients to make contact. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Design Approach </div>
+                <div class="caseStudy-des">centered on creating an interactive and engaging hero section that highlights Credibility key services through a dynamic background slider, clear messaging, and a prominent CTA.</div>
+            </div>
+
+            <div class="p_heding">
+                <span>Problem Statement</span>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Lack of Engagement</div>
+                <div class="caseStudy-des">The previous hero section lacked interactivity and visual appeal, leading to high bounce rates and low user engagement. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Unclear Service Offerings</div>
+                <div class="caseStudy-des">The messaging in the hero section was not clear, concise, or compelling enough to convey Credibility expertise and unique selling points.</div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Low Conversion Rates</div>
+                <div class="caseStudy-des">The call-to-action (CTA) was not prominent, resulting in fewer inquiries and potential leads. </div>
+            </div>
+
+            <div class="p_heding">
+                <span>Design Solutions </span>
+            </div>
+            <div class="caseStudy-div alineItem">
+                <div class="caseStudy-heading">Interactive Background Slider</div>
+                <div class="caseStudy-des">
+                    <!-- <div class="caseStudyInner-des">Challenge</div> -->
+                    <div class="padd-24">Implemented an automatic background slider that changes images to highlight different aspects of Credibility's offerings, enhancing the visual experience for each service.</div>
+                    <div class="caseStudyInner-des">Services included in the slider</div>
+                    <div class="padd-24">Operational Mastery, Employee Growtht, Technology Leadership, Strategic Planning</div>
+                    <div class="dd_img new_dd_img">
+                        <img class="dd_img-img new_dd_img-img" src="./images/Credibility.gif" alt="">
+                    </div>
+                    <div class="padd-tp-24">As the slider automatically transitions, the background image updates to match the featured service, providing visual context and boosting user engagement.</div>
+                </div>
+            </div>
+            <div class="caseStudy-div alineItem">
+                <div class="caseStudy-heading">Clear Value Proposition and Service Highlighting</div>
+                <div class="caseStudy-des">
+                    <!-- <div class="caseStudyInner-des">Challenge</div> -->
+                    <div class="padd-24">Introduced a concise and impactful headline Streamlining Success.</div>
+                    <!-- <div class="caseStudyInner-des">Solution</div> -->
+                    <div class="padd-24">Added a brief yet informative subheading: "Streamlining Success enhances efficiency by refining processes and reducing waste, helping organizations reach their full potential." </div>
+                    <div class="dd_img">
+                        <img class="dd_img-img" src="./images/Group 604.jpg" alt="">
+                    </div>
+                    <div class="padd-tp-24 padd-24">Each service in the slider is accompanied by a small description. When a service is highlighted, it shows a more detailed description and a related image, making it easier for users to understand the offerings. </div>
+                    <div class="dd_img new_dd_img1">
+                        <img class="dd_img-img new_dd_img-img" src="./images/case study animation video.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="caseStudy-div alineItem">
+                <div class="caseStudy-heading">Prominent Call-to-Action</div>
+                <div class="caseStudy-des">
+                    <!-- <div class="caseStudyInner-des">Challenge</div> -->
+                    <div class="padd-24">Designed a clear and prominent CTA button labeled "Contact now" to encourage immediate action from visitors.</div>
+                    <!-- <div class="caseStudyInner-des">Solution</div> -->
+                    <!-- <div class="padd-24">Clear and compelling calls-to-action are strategically placed to guide users towards interaction. The “Contact” and “Get Quotation” buttons are prominently displayed and easy to access, reducing friction in the user journey.</div> -->
+                    <div class="dd_img">
+                        <img class="dd_img-img " src="./images/Group 616.jpg" alt="">
+                    </div>
+                    <div class="padd-tp-24">Positioned the CTA strategically within the hero section to ensure visibility and accessibility. </div>
+                </div>
+            </div>
+            <div class="p_heding">
+                <span>Implementation and Results </span>
+            </div>
+           
+             <div class="caseStudy-div">
+                <div class="caseStudy-heading">User Engagement</div>
+                <div class="caseStudy-des">Post-implementation, there was a noticeable increase in user engagement metrics, including longer time spent on the homepage and reduced bounce rates.  </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Clarity in Messaging</div>
+                <div class="caseStudy-des">The clear and concise messaging helped users quickly understand Credibility value proposition and services, leading to better user comprehension and interest. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Service Highlighting</div>
+                <div class="caseStudy-des">The interactive background slider allowed users to explore Credibility key services in an engaging manner, making it easier for them to understand and relate to each service offering. </div>
+            </div>
+            <div class="caseStudy-div">
+                <div class="caseStudy-heading">Conversion Rates</div>
+                <div class="caseStudy-des">The redesigned hero section led to a significant increase in the number of users clicking the CTA and making contact, thus generating more leads for Credibility. </div>
+            </div>
+           
+             <div class="non-disclosure-agreement padd-bt-40">
+                <span>
+                    The redesigned hero section for Credibility effectively solved initial challenges by creating a visually appealing, informative, and engaging entry point. The interactive background slider, highlighting the four key services, captured user interest and clarified Credibility offerings. This project enhanced the user experience and significantly boosted lead generation and client engagement.
+                </span>
+             </div>
+          </div> 
+        </div>
+    </section>
+    <section>
+        <div class="main_div">
+            <div class="contener padding-top-bottom">
+                <div class="p_heding">
+                    <span>Next work</span>
+                </div>
+                <div class="nextCaseStudy">
+                    <div>
+                        <div class="headertClick">
+                            <a class="download " href="./photoGraohicCaseStudy.html">
+                              <span class="headline_text gradient-text-headline"> 
+                                Captured Moments
+                                  <span class="downloas_cv_svg">
+                                      <!-- <svg class="arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                        <path d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z" fill="#4F6F82" />
+                                      </svg> -->
+                                   </span>
+                              </span>
+                            </a>
+                        </div>
+                        <div class="headLineDi">
+                           Photography website featuring services showcased in the hero section.
+                        </div>
+                    </div>
+                    <img class="photoCity1" src="./images/photograpyBanner.png" alt="">
+                </div>
+              
+                <div class="nextCaseStudy">
+                    <div>
+                        <div class="headertClick padd-to-40">
+                            <a class="download " href="./bookmarkCaseStudy.html">
+                                <span class="headline_text gradient-text-headline"> 
+                                    Bookmarked Moments: A Digital Repository
+                                    <span class="downloas_cv_svg">
+                                        <!-- <svg class="arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                            <path d="M10.6874 28.8722L8.79504 26.9799L19.7744 16.0006L8.79504 5.02124L10.6874 3.12891L23.559 16.0006L10.6874 28.8722Z" fill="#4F6F82" />
+                                        </svg> -->
+                                    </span>
+                                </span> 
+                            </a>
+                        </div>
+                        <div class="headLineDi">
+                        Crafting a digital space for your treasured memories – a website
+                        and web app combo dedicated to your online memory hub.
+                        </div>
+                    </div>
+                    <img class="photoCity" src="./images/photograpyBanner.png" alt="">
+                </div>
+                
+            </div>
+        </div>   
+    </section>
+    <footer>
+      <div class="main_div mainPadding-56">
+        <div class="contener footer-div">
+          <div class="copyRight">© 2024 Ripunjay Palkhe.</div>
+          <div class="menu">
+            <ul>
+              <li><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+              <li id="aboutLink3">About</li>
+              <li><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+       document.getElementById('aboutLink1').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink2').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    document.getElementById('aboutLink3').addEventListener('click', function() {
+       window.location.href = './aboutUs.html';
+    });
+    function back() {
+         history.back()
+     }
+// const backButton = document.
+     function openMenu(){
+     
+        let isMenuOpen = false;
+
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+          isMenuOpen = !isMenuOpen;
+          document.body.classList.toggle('no-scroll', isMenuOpen);
+          console.log('isMenuOpen:', isMenuOpen);
+          console.log('classList:', document.body.classList);
+        });
+      }
+
+    const downloadLink = document.querySelector('.BookHover');
+    const photoCityImage = document.querySelector('.photoCity');
+
+    downloadLink.addEventListener('mouseover', () => {
+       photoCityImage.style.display = 'block';
+    });
+
+    downloadLink.addEventListener('mouseout', () => {
+       photoCityImage.style.display = 'none';
+    });
+
+    const downloadLink1 = document.querySelector('.BookHover1');
+    const photoCityImage1 = document.querySelector('.photoCity1');
+
+    downloadLink1.addEventListener('mouseover', () => {
+       photoCityImage1.style.display = 'block';
+    });
+
+    downloadLink1.addEventListener('mouseout', () => {
+       photoCityImage1.style.display = 'none';
+    });
+
+    </script>
+  </body>
+</html>

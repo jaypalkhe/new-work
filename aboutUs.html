@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ripunjay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/jpg" href="images/favicon-01.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -93,10 +94,13 @@
       color: var(--menu-text-color);
       cursor: pointer !important;
     }
+    ul li a:hover{
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
     ul li:hover{
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
       color: #111111;
       top: 8px;
       animation-timing-function: ease-out;
@@ -126,9 +130,74 @@
       /* text-align: left; */
       color: var(--accent-color);
       position: relative;
-      top: -2px;
+      top: -1px;
       gap: 8px;
     }
+    .downloas_cv_text_2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      /* text-align: left; */
+      color: var(--accent-color);
+      position: relative;
+      top: -1px;
+      gap: 8px;
+    }
+    /* Sliding border effect */
+    .downloas_cv_text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; /* Match border-radius of the text container */
+    }
+
+    .downloas_cv_text:hover::before {
+        transform: scaleX(1);
+    }
+
+    .downloas_cv_text:hover {
+        color: #fff;
+    }
+
+      /* Sliding border effect */
+      .downloas_cv_text_2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 86%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; /* Match border-radius of the text container */
+    }
+
+    /* .downloas_cv_text_2:hover::before {
+        transform: scaleX(1);
+    }
+
+    .downloas_cv_text_2:hover {
+        color: #fff; 
+    }
+
+    .downloas_cv_text:hover.downloas_cv_svg_2 {
+    transform: rotate(90deg);
+    } */
+   
     .downloas_cv_svg_2{
       display: flex;
       justify-content: center;
@@ -194,11 +263,14 @@ body.no-scroll {
     position: relative;
     gap: 8px;
     color: #687076;
-   
+}
+
+.backButton:hover{
+  
 }
     .backButton{
         padding-top: 24px ;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
     }
     .paddingSet{
         padding-right: 0;
@@ -212,6 +284,9 @@ body.no-scroll {
     text-align: center;
     position: relative;
     bottom: 1px;
+}
+.backButtonText:hover{
+  color: #000000;
 }
 
 /* back button end */
@@ -235,14 +310,15 @@ body.no-scroll {
       align-items: center;
     }
     .gradient-text {
-      background: linear-gradient(
+          background:linear-gradient(
           86deg,
-          #0f3058 0%,
-          #0c3a6f 0.01%,
-          #0561c4 29.9%,
-          #11181c 35.33%,
-          #0254ad 33.33%,
-          #11181c 50%,
+          #0f3058 11%,
+          #0c3a6f 9.01%,
+          #0561c4 51.9%,
+          #11181c 41.33%,
+          #0254ad 10%,
+          #11181c 20%,
+          #0561c4 8%,
           #11181c 100%
         ),
         linear-gradient(0deg, #11181c 37%, rgba(17, 24, 28, 0) 45%);
@@ -257,6 +333,7 @@ body.no-scroll {
       width: 100%;
       height: 100%;
       opacity: 100%;
+      margin-top: 24px;
     }
     .banner_img {
       position: relative;
@@ -322,6 +399,10 @@ body.no-scroll {
       line-height: 40px;
       text-align: left;
       margin-bottom: 8px;
+      background: linear-gradient(90deg, #11181c 0%, #315f79 50%, #4f6f82 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .graphicDesc{
@@ -331,7 +412,6 @@ body.no-scroll {
       line-height: 24px;
       text-align: left;
       color: #687076;
-      width: 416px;
     }
 
     .GraphicDiv{
@@ -354,6 +434,8 @@ body.no-scroll {
       gap: 24px;
       overflow: scroll;
       flex-wrap: nowrap;
+      scrollbar-width: none; 
+      -ms-overflow-style: none;
     }
 
     .imgSecond{
@@ -361,7 +443,18 @@ body.no-scroll {
       gap: 24px;
       overflow: scroll;
       flex-wrap: nowrap;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;
     }
+   
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, and newer versions of Opera) */
+.imgFirst::-webkit-scrollbar {
+    display: none;
+}
+.imgSecond::-webkit-scrollbar {
+    display: none;
+}
 
     .imgFirst img{
       width:198px;
@@ -379,14 +472,14 @@ body.no-scroll {
       gap: 24px;
     }
     .padding-40{
-      padding: 40px 0;
+      padding: 56px 0;
     }
     .padding-bottom-52{
-      padding-bottom:52px;
+      padding-bottom:56px;
     }
     .contact_info-link {
       display: flex;
-      gap: 32px;
+      gap: 24px;
       /* padding-left: 16px; */
     }
     .link-heding {
@@ -394,23 +487,56 @@ body.no-scroll {
       justify-content: center;
       align-items: center;
       font-family: "Poppins", sans-serif;
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 500;
-      line-height: 32px;
-      text-align: left;
-      color: #507fa2;
+      line-height: 24px;
+      /* text-align: left; */
+      color: #006ADC;
       text-decoration: none;
     }
     a {
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    
     }
     .contact-link {
-      color: #507fa2;
+      color: #006ADC;
+      position: relative;
+      top: 1px;
     }
+      /* Sliding border effect */
+      .contact-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--accent-color);
+        z-index: -1;
+        transition: transform 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 5px; /* Match border-radius of the text container */
+    }
+
+    .contact-link:hover::before {
+        transform: scaleX(1);
+    }
+
+    .contact-link:hover {
+        color: #fff; /* Change text color on hover */
+    }
+    .contact-link:hover.downloas_cv_svg_2 {
+    transform: rotate(90deg); /* Rotate SVG 360 degrees */
+    }
+
     .svg-aline{
       position: relative;
       top: 4px;
-      padding-left: 8px;
+      /* padding-left: 8px; */
     }
     .contact_svg {
         height: 24px;
@@ -419,12 +545,21 @@ body.no-scroll {
       .imgTuch {
         width: 100%;
         height: auto;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
+      }
+      .desktop_image{
+        display: block;
+      }
+      .mobile_image{
+        display: none;
       }
       .imgTuch img{
         width: 100%;
         height: auto;
       }
+      .gap_24{
+  gap: 24px;
+}
     @media (max-width: 1210px) {
       .contener-header {
         width: auto;
@@ -752,6 +887,12 @@ body.no-scroll {
       .content{
         gap: 40px;
       }
+      .desktop_image{
+        display: none;
+      }
+      .mobile_image{
+        display: block;
+      }
           
       /* .content_img{
         width: 53%;
@@ -773,8 +914,22 @@ body.no-scroll {
 
     font-size: 14px;
     line-height: 22px;
-    padding-right: 16px;
+    /* padding-right: 16px; */
       } 
+      .graphicInfo{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+      .otherHeding{
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 32px;
+      }
+      .GraphicDiv{
+        gap: 24px;
+      }
+      
       .Desktop_menu {
         display: none;
       }
@@ -807,7 +962,7 @@ body.no-scroll {
           margin: 0 16px;
       }
       .other-contener{
-        padding: 40px 32px;
+        padding: 40px 16px;
       }
     .banner-tab-contener{
       margin: 0 32px !important;
@@ -826,16 +981,20 @@ body.no-scroll {
           <div class="contener">
             <div class="menu_bar">
               <div class="logo">
-                <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+                <a  href="./index.html" class="menu-link" >
+                  <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+                </a>
+                <!-- <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" /> -->
               </div>
-              <div class="Desktop_menu" class="menu">
-                <ul>
-                  <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
-                  <li class="pointer" id="aboutLink1">About</li>
-                  <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
-                </ul>
-              </div>
-              <div class="download_cv Desktop_menu">
+            
+              <div class="download_cv Desktop_menu gap_24">
+                <div class="Desktop_menu" class="menu">
+                  <ul>
+                    <li class="pointer"><a href="./index.html#Highlighted_Works" class="menu-link" data-target="Highlighted_Works">Work</a></li>
+                    <li class="pointer" id="aboutLink1">About</li>
+                    <li class="pointer"><a href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">Contact</a></li>
+                  </ul>
+                </div>
                 <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
                   <span class="downloas_cv_text">Download CV</span>
                   <span class="downloas_cv_svg">
@@ -934,7 +1093,7 @@ body.no-scroll {
               </div>
               <div>
                 <a class="download" href="./index.html#ContactUS" class="menu-link" data-target="ContactUS">
-                  <span class="downloas_cv_text">Contact me
+                  <span class="downloas_cv_text_2">Contact me
                     <span class="downloas_cv_svg_2">
                        <svg
                        class="width-24"
@@ -985,7 +1144,7 @@ body.no-scroll {
                 <div class="imgSecond">
                   <img src="./images/indian_force.png" alt="">
                   <img src="./images/indian_navi.png" alt="">
-                  <img src="./images/save_mi.png" alt="">
+                  <img src="./images/save_mi.jpg" alt="">
                 </div>
             </div>
           </div>
@@ -1000,7 +1159,8 @@ body.no-scroll {
           </div>
           <div class="letBrig">
             <div class="imgTuch">
-              <img src="./images/about_ge_touch.png" alt="">
+              <img class="desktop_image" src="./images/let's.jpg" alt="">
+              <img class="mobile_image" src="./images/mobile_image_for_about_me.jpg" alt="">
             </div>
             <div class="info">
               <span class="contact_info-link">
@@ -1008,8 +1168,21 @@ body.no-scroll {
                   <a target="_blank" class="" href="https://www.linkedin.com/in/ripunjay-palkhe/">
                     <span class="contact-link">LinkedIn</span>
                     <span class="svg-aline">
-                      <svg class="contact_svg" xmlns="http://www.w3.org/2000/svg" width="16" height="26" viewBox="0 0 16 26" fill="none">
-                        <path d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z" fill="#507FA2"></path>
+                      <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.01593 21.6542L6.59668 20.2349L14.8312 12.0004L6.59668 3.76593L8.01593 2.34668L17.6697 12.0004L8.01593 21.6542Z" fill="#006ADC"/>
+                        </svg> -->
+                        <svg
+                        class="width-24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="20"
+                        viewBox="0 0 12 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                          fill="#006ADC"
+                        />
                       </svg>
                     </span>
                   </a>
@@ -1018,8 +1191,21 @@ body.no-scroll {
                   <a href="mailto:palkheripunjay01@gmail.com" style="text-transform: none;" target="_blank">
                     <span class="contact-link">Email</span>
                     <span class="svg-aline">
-                      <svg class="email_svg" xmlns="http://www.w3.org/2000/svg" width="16" height="26" viewBox="0 0 16 26" fill="none">
-                        <path d="M2.68726 25.8722L0.794922 23.9799L11.7743 13.0006L0.794922 2.02124L2.68726 0.128906L15.5589 13.0006L2.68726 25.8722Z" fill="#507FA2"></path>
+                      <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.01593 21.6542L6.59668 20.2349L14.8312 12.0004L6.59668 3.76593L8.01593 2.34668L17.6697 12.0004L8.01593 21.6542Z" fill="#006ADC"/>
+                        </svg> -->
+                        <svg
+                        class="width-24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="20"
+                        viewBox="0 0 12 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M2.01544 19.6537L0.596191 18.2344L8.83069 9.99994L0.596191 1.76544L2.01544 0.346191L11.6692 9.99994L2.01544 19.6537Z"
+                          fill="#006ADC"
+                        />
                       </svg>
                     </span>
                   </a>

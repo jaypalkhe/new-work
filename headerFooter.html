@@ -82,11 +82,14 @@
       color: var(--menu-text-color);
       cursor: pointer !important;
     }
+    ul li a:hover{
+      color: #111111;
+      top: 8px;
+      animation-timing-function: ease-out;
+      animation-duration: 1000ms;
+    }
     
     ul li:hover{
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 400;
       color: #111111;
       top: 8px;
       animation-timing-function: ease-out;
@@ -115,7 +118,7 @@
       line-height: 24px;
       color: var(--accent-color);
       position: relative;
-      top: -2px;
+      top: -1px;
       gap: 8px;
     }
    
@@ -168,7 +171,9 @@
 body.no-scroll {
     overflow: hidden !important;
 }
-
+.gap_24{
+  gap: 24px;
+}
     @media (max-width: 1210px) {
       .contener-header {
         width: auto;
@@ -449,16 +454,20 @@ body.no-scroll {
           <div class="contener">
             <div class="menu_bar">
               <div class="logo">
-                <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+                <a href="./index.html" class="menu-link" >
+                  <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" />
+                </a>
+                <!-- <img class="logo-nav" src="images/ripunjay logo-01 1 (1).png" alt="" /> -->
               </div>
-              <div class="Desktop_menu" class="menu">
-                <ul>
-                  <li class="pointer">Work</li>
-                  <li class="pointer" id="aboutLink1">About</li>
-                  <li class="pointer">Contact</li>
-                </ul>
-              </div>
-              <div class="download_cv Desktop_menu">
+             
+              <div class="download_cv Desktop_menu gap_24">
+                <div class="Desktop_menu" class="menu">
+                  <ul>
+                    <li class="pointer">Work</li>
+                    <li class="pointer" id="aboutLink1">About</li>
+                    <li class="pointer">Contact</li>
+                  </ul>
+                </div>
                 <a target="_blank" class="download" href="https://drive.google.com/file/d/1Dt-XLqBjds-v66Kz54_CFNoRe9yFl82g/view?usp=drivesdk">
                   <span class="downloas_cv_text">Download CV</span>
                   <span class="downloas_cv_svg">
