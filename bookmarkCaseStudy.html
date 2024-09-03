@@ -185,6 +185,15 @@ body.no-scroll {
 .gap_24{
   gap: 24px;
 }
+
+.desktop_image{
+  display: block;
+}
+
+.mobile_image{
+  display: none;
+}
+
 .commitSoon{
     height: 75%;
     width: 100%;
@@ -457,6 +466,14 @@ body.no-scroll {
     .mobile{
        display: none;
     }
+
+    .desktop_image{
+    display: none;
+    }
+
+    .mobile_image{
+      display: block;
+    }
    
 
     .contener-header {
@@ -553,7 +570,8 @@ body.no-scroll {
       </div>
     </nav>
   <section class="commitSoon">
-       <img src="./images/coming_soon-01.png" alt="">
+       <img class="desktop_image" src="./images/coming_soon-01.png" alt="">
+       <img class="mobile_image" src="./images/Mobile_image_Bookmarks.png" alt="">
   </section>
     <footer>
       <div class="main_div mainPadding-56">
